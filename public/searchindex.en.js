@@ -172,7 +172,7 @@ var relearn_searchindex = [
     "content": "Plan et objectifs de la leçon Atelier : Mise en pratique des connaissances acquises dans un projet complet",
     "description": "Plan et objectifs de la leçon Atelier : Mise en pratique des connaissances acquises dans un projet complet",
     "tags": [],
-    "title": "Semaine 12 : Travaux pratiques 1",
+    "title": "Semaine 12 : TP 1",
     "uri": "/semaine12/index.html"
   },
   {
@@ -188,7 +188,7 @@ var relearn_searchindex = [
     "content": "Plan et objectifs de la leçon Atelier : Deuxième projet pratique mettant en œuvre les concepts avancés",
     "description": "Plan et objectifs de la leçon Atelier : Deuxième projet pratique mettant en œuvre les concepts avancés",
     "tags": [],
-    "title": "Semaine 14 : Travaux pratiques 2",
+    "title": "Semaine 14 : TP 2",
     "uri": "/semaine14/index.html"
   },
   {

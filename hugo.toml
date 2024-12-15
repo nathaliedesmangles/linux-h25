@@ -1,4 +1,17 @@
-baseURL = 'https://linux-h25.github.com/'
+baseURL = 'https://example.org/'
 languageCode = 'fr-ca'
-title = '420-ZG4-MO'
-theme = "relearn"
+title = '420-ZG4-MO Linux'
+theme = 'relearn'
+
+[params]
+    disableLandingPageButton = true
+    disableSearch = true
+    disableHomeButton = true
+    # Change default color scheme with a variant one.
+    themeVariant = "mine"
+
+
+  [params.menu]
+    alwaysopen = false
+
+

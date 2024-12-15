@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Les commandes de base :: 420-ZG4-MO</title>
-    <link>https://linux-h25.github.com/semaine2/index.html</link>
+    <title>Les commandes de base :: 420-ZG4-MO Linux</title>
+    <link>https://example.org/semaine2/index.html</link>
     <description>Plan et objectifs de la leçon Théorie :&#xA;Structure du système de fichiers Linux Commandes de navigation de base (ls, cd, pwd, etc.) Atelier :&#xA;Exercices pratiques sur les commandes de base</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="https://linux-h25.github.com/semaine2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/semaine2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exécution de commandes à l’aide du Shell Bash</title>
-      <link>https://linux-h25.github.com/semaine2/intro-shell-bash/index.html</link>
+      <link>https://example.org/semaine2/intro-shell-bash/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://linux-h25.github.com/semaine2/intro-shell-bash/index.html</guid>
+      <guid>https://example.org/semaine2/intro-shell-bash/index.html</guid>
       <description>Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d’exploitation Unix et Linux. Il permet aux utilisateurs d’exécuter des commandes pour interagir avec le système d’exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l’exécution de commandes simples à l’aide du shell Bash.&#xA;La ligne de commande Ligne de commande: La ligne de commande est l’interface où vous tapez vos commandes. Elle est souvent représentée par un symbole $ ou # pour les utilisateurs root. Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante. Exemple:</description>
     </item>
     <item>
       <title>Structure du système de fichiers Linux</title>
-      <link>https://linux-h25.github.com/semaine2/systeme-fichiers/index.html</link>
+      <link>https://example.org/semaine2/systeme-fichiers/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://linux-h25.github.com/semaine2/systeme-fichiers/index.html</guid>
+      <guid>https://example.org/semaine2/systeme-fichiers/index.html</guid>
       <description>La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.&#xA;La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.</description>
     </item>
     <item>
       <title>Commandes de navigation de base sous Linux</title>
-      <link>https://linux-h25.github.com/semaine2/commandes-base/index.html</link>
+      <link>https://example.org/semaine2/commandes-base/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://linux-h25.github.com/semaine2/commandes-base/index.html</guid>
+      <guid>https://example.org/semaine2/commandes-base/index.html</guid>
       <description>Naviguer dans le système de fichiers Linux est une compétence essentielle pour tout utilisateur. Dans cette leçon vous apprendrez sur les commandes de base qui vous permettront de vous déplacer et de gérer les fichiers et répertoires dans un environnement Linux.&#xA;Commandes de base pwd (print working directory)&#xA;Description : Affiche le chemin complet du répertoire courant. pwd&#xD;Exemple de résultat : /home/utilisateur&#xD;ls (list)&#xA;Description : Liste les fichiers et répertoires dans le répertoire courant. ls&#xD;Options courantes : ls -l : Affiche les détails des fichiers et répertoires (permissions, propriétaire, taille, etc.). ls -a : Affiche tous les fichiers, y compris les fichiers cachés (ceux commençant par un point). ls -lh : Affiche les tailles de fichiers dans un format lisible (Ko, Mo, Go). Exemple : ls -l total 12 drwxr-xr-x 2 utilisateur utilisateur 4096 jan 1 12:00 Documents -rw-r--r-- 1 utilisateur utilisateur 123 jan 1 12:00 fichier.txt&#xD;cd (change directory)</description>
     </item>
     <item>
       <title>ATELIER: Les commandes Linux de base</title>
-      <link>https://linux-h25.github.com/semaine2/atelier/index.html</link>
+      <link>https://example.org/semaine2/atelier/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://linux-h25.github.com/semaine2/atelier/index.html</guid>
+      <guid>https://example.org/semaine2/atelier/index.html</guid>
       <description>Objectif de l’atelier Cet atelier a pour but de vous familiariser avec les commandes simples et de base sous Linux en utilisant Ubuntu comme distribution Linux. Les exercices pratiques permettront de renforcer la compréhension et l’utilisation de ces commandes.&#xA;Attention&#xD;Votre Windows 10/11 de votre VM doit être à jour.&#xA;Préalables Mettre à jour Windows Pour Windows 10:&#xA;Cliquer sur Mise à jour de Windows 10 et cliquer sur Mettre à jour maintenant.</description>
     </item>
   </channel>

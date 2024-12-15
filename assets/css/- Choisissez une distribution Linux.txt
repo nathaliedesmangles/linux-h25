@@ -1,0 +1,4 @@
+   - Choisissez une distribution Linux (par exemple, Ubuntu, Fedora, Debian).
+   - Téléchargez l'image ISO de la distribution choisie depuis son site officiel. Par exemple, pour Ubuntu, visitez [Ubuntu](https://ubuntu.com/download).
+
+   - **VirtualBox** : Téléchargez et installez VirtualBox depuis le site officiel [VirtualBox](https://www.virtualbox.org/).

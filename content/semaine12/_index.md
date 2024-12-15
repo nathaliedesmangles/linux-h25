@@ -1,5 +1,5 @@
 +++
-title = "Semaine 12 : Travaux pratiques 1"
+title = "Semaine 12 : TP 1"
 type = "chapter"
 weight = 120
 +++

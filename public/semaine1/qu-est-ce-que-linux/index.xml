@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qu&#39;est-ce que Linux ? :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine1/qu-est-ce-que-linux/index.html</link>
+    <description>Qu’est-ce que Linux ? Définition&#xD;Linux est un système d’exploitation puissant et flexible qui offre de nombreux avantages, notamment en termes de sécurité, de stabilité, et de personnalisation.&#xA;Que ce soit pour un usage personnel, professionnel, ou pour des serveurs, Linux est une option solide et fiable.&#xA;Un peu d’histoire 1991 : Créé par Linus Torvalds et est basé sur le système Unix. 1992 : Le noyau Linux a été re-licencié sous la licence publique générale GNU (GPL), ce qui a renforcé son statut de logiciel libre. 1994 : La version 1.0 du noyau Linux a été publiée, marquant une étape importante dans son développement. Depuis sa création, Linux est devenu l’un des systèmes d’exploitation les plus populaires, notamment pour les serveurs, les superordinateurs, et les appareils embarqués.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine1/qu-est-ce-que-linux/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

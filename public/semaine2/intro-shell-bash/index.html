@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.135.0">
+    <meta name="generator" content="Relearn 7.2.1">
+    <meta name="description" content="Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d’exploitation Unix et Linux. Il permet aux utilisateurs d’exécuter des commandes pour interagir avec le système d’exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l’exécution de commandes simples à l’aide du shell Bash.
+La ligne de commande Ligne de commande: La ligne de commande est l’interface où vous tapez vos commandes. Elle est souvent représentée par un symbole $ ou # pour les utilisateurs root. Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante. Exemple:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Exécution de commandes à l’aide du Shell Bash :: 420-ZG4-MO">
+    <meta name="twitter:description" content="Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d’exploitation Unix et Linux. Il permet aux utilisateurs d’exécuter des commandes pour interagir avec le système d’exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l’exécution de commandes simples à l’aide du shell Bash.
+La ligne de commande Ligne de commande: La ligne de commande est l’interface où vous tapez vos commandes. Elle est souvent représentée par un symbole $ ou # pour les utilisateurs root. Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante. Exemple:">
+    <meta property="og:url" content="https://linux-h25.github.com/semaine2/intro-shell-bash/index.html">
+    <meta property="og:site_name" content="420-ZG4-MO">
+    <meta property="og:title" content="Exécution de commandes à l’aide du Shell Bash :: 420-ZG4-MO">
+    <meta property="og:description" content="Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d’exploitation Unix et Linux. Il permet aux utilisateurs d’exécuter des commandes pour interagir avec le système d’exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l’exécution de commandes simples à l’aide du shell Bash.
+La ligne de commande Ligne de commande: La ligne de commande est l’interface où vous tapez vos commandes. Elle est souvent représentée par un symbole $ ou # pour les utilisateurs root. Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante. Exemple:">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Exécution de commandes à l’aide du Shell Bash :: 420-ZG4-MO">
+    <meta itemprop="description" content="Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d’exploitation Unix et Linux. Il permet aux utilisateurs d’exécuter des commandes pour interagir avec le système d’exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l’exécution de commandes simples à l’aide du shell Bash.
+La ligne de commande Ligne de commande: La ligne de commande est l’interface où vous tapez vos commandes. Elle est souvent représentée par un symbole $ ou # pour les utilisateurs root. Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante. Exemple:">
+    <meta itemprop="wordCount" content="660">
+    <title>Exécution de commandes à l’aide du Shell Bash :: 420-ZG4-MO</title>
+    <link href="/semaine2/intro-shell-bash/index.xml" rel="alternate" type="application/rss+xml" title="Exécution de commandes à l’aide du Shell Bash :: 420-ZG4-MO">
+    <link href="/css/fontawesome-all.min.css?1734277356" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734277356" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1734277356" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734277356" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1734277356" rel="stylesheet">
+    <link href="/css/theme.min.css?1734277356" rel="stylesheet">
+    <link href="/css/format-html.min.css?1734277356" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/linux-h25.github.com';
+      window.relearn.min = `.min`;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/semaine2/intro-shell-bash/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#la-ligne-de-commande">La ligne de commande</a></li>
+    <li><a href="#commandes-simples">Commandes simples</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">420-ZG4-MO Système d’exploitation Linux</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/semaine2/index.html"><span itemprop="name">Les commandes de base</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Exécution de commandes à l’aide du Shell Bash</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine2/index.html" title="Les commandes de base (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine2/systeme-fichiers/index.html" title="Structure du système de fichiers Linux (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable semaine2" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="exécution-de-commandes-à-laide-du-shell-bash">Exécution de commandes à l’aide du Shell Bash</h1>
+
+<p>Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d&rsquo;exploitation Unix et Linux. Il permet aux utilisateurs d&rsquo;exécuter des commandes pour interagir avec le système d&rsquo;exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l&rsquo;exécution de commandes simples à l&rsquo;aide du shell Bash.</p>
+<h2 id="la-ligne-de-commande">La ligne de commande</h2>
+<ol>
+<li><strong>Ligne de commande</strong>:
+<ul>
+<li>La ligne de commande est l&rsquo;interface où vous tapez vos commandes. Elle est souvent représentée par un symbole <code>$</code> ou <code>#</code> pour les utilisateurs root.</li>
+<li>Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Exemple</strong>:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>[user@host]$ whoami
+</span></span><span style="display:flex;"><span>user
+</span></span><span style="display:flex;"><span>[user@host]$ </span></span></code></pre></div>
+<h2 id="commandes-simples">Commandes simples</h2>
+<p>Ces commandes simples sont essentielles pour naviguer et gérer efficacement un système Linux à l&rsquo;aide du shell Bash. La maîtrise de ces commandes vous permettra d&rsquo;effectuer des tâches courantes de manière plus efficace et de mieux comprendre le fonctionnement de votre système.</p>
+<ol>
+<li>
+<p><strong>date</strong></p>
+<ul>
+<li><strong>Description</strong> : Affiche ou définit la date et l&rsquo;heure du système.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>date</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mon Dec  <span style="color:#ae81ff">3</span> 11:45:00 EST <span style="color:#ae81ff">2024</span></span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>passwd</strong></p>
+<ul>
+<li><strong>Description</strong> : Change le mot de passe de l&rsquo;utilisateur.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>passwd</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<ul>
+<li>L&rsquo;utilisateur est invité à entrer son mot de passe actuel, puis le nouveau mot de passe.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>cat</strong></p>
+<ul>
+<li><strong>Description</strong> : Affiche le contenu d&rsquo;un fichier ou concatène plusieurs fichiers.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat nom_du_fichier</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat fichier.txt</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Contenu du fichier.txt</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>less</strong></p>
+<ul>
+<li><strong>Description</strong> : Affiche le contenu d&rsquo;un fichier page par page.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>less nom_du_fichier</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>less fichier.txt</span></span></code></pre></div>
+</li>
+<li><strong>Navigation</strong> :
+<ul>
+<li><code>Espace</code> : Page suivante</li>
+<li><code>b</code> : Page précédente</li>
+<li><code>q</code> : Quitter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>head</strong></p>
+<ul>
+<li><strong>Description</strong> : Affiche les premières lignes d&rsquo;un fichier.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>head nom_du_fichier</span></span></code></pre></div>
+</li>
+<li><strong>Options courantes</strong> :
+<ul>
+<li><code>head -n 10 nom_du_fichier</code> : Affiche les 10 premières lignes (par défaut).</li>
+</ul>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>head fichier.txt</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>tail</strong></p>
+<ul>
+<li><strong>Description</strong> : Affiche les dernières lignes d&rsquo;un fichier.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tail nom_du_fichier</span></span></code></pre></div>
+</li>
+<li><strong>Options courantes</strong> :
+<ul>
+<li><code>tail -n 10 nom_du_fichier</code> : Affiche les 10 dernières lignes (par défaut).</li>
+<li><code>tail -f nom_du_fichier</code> : Affiche les nouvelles lignes ajoutées en temps réel.</li>
+</ul>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tail fichier.txt</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>; (point-virgule)</strong></p>
+<ul>
+<li><strong>Description</strong> : Permet d&rsquo;exécuter plusieurs commandes sur une seule ligne.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>commande1 ; commande2</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>date ; whoami</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Mon Dec  3 11:45:00 EST 2024
+</span></span><span style="display:flex;"><span>utilisateur</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>wc</strong></p>
+<ul>
+<li><strong>Description</strong> : Compte les lignes, mots et caractères d’un fichier. Accepte les options -l, -w ou -c pour n’afficher respectivement que le nombre de lignes, de mots ou de caractères.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ wc /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">45</span>  <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">2480</span> /etc/passwd</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ wc -l /etc/passwd ; wc -l /etc/group
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">45</span> /etc/passwd
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">70</span> /etc/group</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>45 /etc/passwd
+</span></span><span style="display:flex;"><span>70 /etc/group</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>tabulation</strong></p>
+<ul>
+<li><strong>Description</strong> : Permet de compléter rapidement les commandes et les noms de fichiers après avoir entré un nombre de caractères suffisant pour réduire les possibilités à une seule. Si les caractères saisis ne sont pas uniques, appuyez deux fois sur la touche de tabulation pour afficher toutes les commandes correspondantes.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ pas Tab+Tab
+</span></span><span style="display:flex;"><span>passwd       paste        pasuspender
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ pass Tab
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ passwd 
+</span></span><span style="display:flex;"><span>Changing password <span style="color:#66d9ef">for</span> user user.
+</span></span><span style="display:flex;"><span>Current password: </span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ ls /etc/pas1Tab
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ ls /etc/passwd2Tab
+</span></span><span style="display:flex;"><span>passwd   passwd-</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>passwd
+</span></span><span style="display:flex;"><span>passwd-</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>history</strong></p>
+</li>
+</ol>
+<ul>
+<li><strong>Description</strong> : Affiche la liste des commandes précédemment exécutées, précédées d’un numéro de commande. Le point d’exclamation (!) rappelle les commandes précédentes sans avoir à les retaper. La commande <strong><code>!number</code></strong> rappelle la commande correspondant au nombre spécifié. La commande <strong><code>!string</code></strong> rappelle la commande la plus récente qui commence par la chaîne spécifiée.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ history
+</span></span><span style="display:flex;"><span>...output omitted...
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">23</span>  clear
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">24</span>  who
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">25</span>  pwd
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">26</span>  ls /etc
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">27</span>  uptime
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">28</span>  ls -l
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">29</span>  date
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">30</span>  history</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ !ls
+</span></span><span style="display:flex;"><span>ls -l
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">6</span> Mar <span style="color:#ae81ff">29</span> 21:16 Desktop
+</span></span><span style="display:flex;"><span>...output omitted...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>user@host ~<span style="color:#f92672">]</span>$ !26
+</span></span><span style="display:flex;"><span>ls /etc
+</span></span><span style="display:flex;"><span>abrt                     hosts                     pulse
+</span></span><span style="display:flex;"><span>adjtime                  hosts.allow               purple
+</span></span><span style="display:flex;"><span>aliases                  hosts.deny                qemu-ga
+</span></span><span style="display:flex;"><span>...output omitted...</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ls -l
+</span></span><span style="display:flex;"><span>total 0
+</span></span><span style="display:flex;"><span>drwxr-xr-x. 2 user user 6 Mar 29 21:16 Desktop
+</span></span><span style="display:flex;"><span>ls /etc
+</span></span><span style="display:flex;"><span>abrt                     hosts                     pulse
+</span></span><span style="display:flex;"><span>adjtime                  hosts.allow               purple
+</span></span><span style="display:flex;"><span>aliases                  hosts.deny                qemu-ga</span></span></code></pre></div>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+420-ZG4-MO
+          </a>
+        </div>
+        <script>
+          window.index_js_url="/searchindex.en.js?1734277356";
+        </script>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/js/auto-complete.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.fr.min.js?1734277356" defer></script>
+        <script src="/js/search.js?1734277356" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/semaine1/index.html"><a class="padding" href="/semaine1/index.html"><b>Semaine 1. </b>Introduction à Linux</a><ul id="R-subsections-6db614d031e1cac329e6c8b2f083c50f" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/semaine2/index.html"><a class="padding" href="/semaine2/index.html"><b>Semaine 2. </b>Les commandes de base</a><ul id="R-subsections-30aa4391f5b81ccda88d9d93cb48f88e" class="collapsible-menu">
+            <li class="active " data-nav-id="/semaine2/intro-shell-bash/index.html"><a class="padding" href="/semaine2/intro-shell-bash/index.html">Exécution de commandes à l’aide du Shell Bash</a></li>
+            <li class="" data-nav-id="/semaine2/systeme-fichiers/index.html"><a class="padding" href="/semaine2/systeme-fichiers/index.html">Structure du système de fichiers Linux</a></li>
+            <li class="" data-nav-id="/semaine2/commandes-base/index.html"><a class="padding" href="/semaine2/commandes-base/index.html">Commandes de navigation de base sous Linux</a></li>
+            <li class="" data-nav-id="/semaine2/atelier/index.html"><a class="padding" href="/semaine2/atelier/index.html">ATELIER: Les commandes Linux de base</a></li></ul></li>
+            <li class="" data-nav-id="/semaine3/index.html"><a class="padding" href="/semaine3/index.html">Semaine 3 : Éditeurs de texte</a></li>
+            <li class="" data-nav-id="/semaine4/index.html"><a class="padding" href="/semaine4/index.html">Semaine 4 : Introduction au BASH</a></li>
+            <li class="" data-nav-id="/semaine5/index.html"><a class="padding" href="/semaine5/index.html">Semaine 5 : Processus et gestion des tâches</a></li>
+            <li class="" data-nav-id="/semaine6/index.html"><a class="padding" href="/semaine6/index.html">Semaine 6 : Les expressions régulières</a></li>
+            <li class="" data-nav-id="/semaine7/index.html"><a class="padding" href="/semaine7/index.html">Semaine 7 : Les fichiers de configuration et examen formatif</a></li>
+            <li class="" data-nav-id="/semaine8/index.html"><a class="padding" href="/semaine8/index.html">Semaine 8 : Gestion des paquets</a></li>
+            <li class="" data-nav-id="/semaine9/index.html"><a class="padding" href="/semaine9/index.html">Semaine 9 : Réseaux et configuration</a></li>
+            <li class="" data-nav-id="/semaine10/index.html"><a class="padding" href="/semaine10/index.html">Semaine 10 : Sécurité de base</a></li>
+            <li class="" data-nav-id="/semaine11/index.html"><a class="padding" href="/semaine11/index.html">Semaine 11 : Scripting Shell</a></li>
+            <li class="" data-nav-id="/semaine12/index.html"><a class="padding" href="/semaine12/index.html">Semaine 12 : Travaux pratiques 1</a></li>
+            <li class="" data-nav-id="/semaine13/index.html"><a class="padding" href="/semaine13/index.html">Semaine 13 : Administration avancée</a></li>
+            <li class="" data-nav-id="/semaine14/index.html"><a class="padding" href="/semaine14/index.html">Semaine 14 : Travaux pratiques 2</a></li>
+            <li class="" data-nav-id="/semaine15/index.html"><a class="padding" href="/semaine15/index.html">Semaine 15 : Révision finale et examen</a></li>
+            <li class="" data-nav-id="/solutionnaires/index.html"><a class="padding" href="/solutionnaires/index.html">Solutions des ateliers</a><ul id="R-subsections-fd65cb0835a655cc8c1280a4fc3f2b90" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/semaine2/intro-shell-bash/index.html" lang="fr-ca" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+        <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1734277356" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1734277356" defer></script>
+    <script src="/js/theme.js?1734277356" defer></script>
+  </body>
+</html>

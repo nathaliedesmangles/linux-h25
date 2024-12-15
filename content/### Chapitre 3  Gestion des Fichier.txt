@@ -1,0 +1,155 @@
+### Chapitre 3 : Gestion des Fichiers et Répertoires
+
+#### **3.1 Introduction**
+
+La gestion des fichiers et des répertoires est une compétence fondamentale pour tout utilisateur de Linux. Ce chapitre couvre les commandes essentielles pour créer, manipuler, et organiser les fichiers et répertoires sur un système Linux.
+
+#### **3.2 Création de Fichiers et Répertoires**
+
+1. **`touch` : Créer un fichier vide ou mettre à jour l'horodatage**
+   - **Syntaxe** : `touch fichier`
+   - **Exemple** :
+     ```bash
+     touch mon_fichier.txt    # Crée un fichier vide nommé "mon_fichier.txt"
+     ```
+
+2. **`mkdir` : Créer un répertoire**
+   - **Syntaxe** : `mkdir [options] répertoire`
+   - **Exemples** :
+     ```bash
+     mkdir mon_repertoire          # Crée un répertoire nommé "mon_repertoire"
+     mkdir -p chemin/complet       # Crée un répertoire et ses parents si nécessaire
+     ```
+
+#### **3.3 Suppression de Fichiers et Répertoires**
+
+1. **`rm` : Supprimer des fichiers ou des répertoires**
+   - **Syntaxe** : `rm [options] fichier`
+   - **Exemples** :
+     ```bash
+     rm mon_fichier.txt       # Supprime le fichier "mon_fichier.txt"
+     rm -r mon_repertoire     # Supprime le répertoire "mon_repertoire" et son contenu
+     rm -f mon_fichier.txt    # Force la suppression sans confirmation
+     ```
+
+2. **`rmdir` : Supprimer un répertoire vide**
+   - **Syntaxe** : `rmdir répertoire`
+   - **Exemple** :
+     ```bash
+     rmdir mon_repertoire    # Supprime le répertoire "mon_repertoire" s'il est vide
+     ```
+
+#### **3.4 Copie et Déplacement de Fichiers et Répertoires**
+
+1. **`cp` : Copier des fichiers ou des répertoires**
+   - **Syntaxe** : `cp [options] source destination`
+   - **Exemples** :
+     ```bash
+     cp fichier1 fichier2             # Copie "fichier1" vers "fichier2"
+     cp -r repertoire1 repertoire2    # Copie le répertoire "repertoire1" vers "repertoire2"
+     ```
+
+2. **`mv` : Déplacer ou renommer des fichiers ou des répertoires**
+   - **Syntaxe** : `mv [options] source destination`
+   - **Exemples** :
+     ```bash
+     mv fichier1 fichier2             # Renomme "fichier1" en "fichier2"
+     mv fichier1 /chemin/vers/dossier # Déplace "fichier1" vers un autre répertoire
+     ```
+
+#### **3.5 Affichage et Lecture de Fichiers**
+
+1. **`cat` : Afficher le contenu d'un fichier**
+   - **Syntaxe** : `cat fichier`
+   - **Exemple** :
+     ```bash
+     cat mon_fichier.txt    # Affiche le contenu de "mon_fichier.txt"
+     ```
+
+2. **`more` et `less` : Lire un fichier page par page**
+   - **Syntaxe** : `more fichier` ou `less fichier`
+   - **Exemples** :
+     ```bash
+     more mon_fichier.txt    # Affiche le contenu de "mon_fichier.txt" page par page
+     less mon_fichier.txt    # Idem, mais avec plus de fonctionnalités de navigation
+     ```
+
+3. **`head` et `tail` : Afficher les premières ou dernières lignes d'un fichier**
+   - **Syntaxe** : `head [options] fichier` ou `tail [options] fichier`
+   - **Exemples** :
+     ```bash
+     head mon_fichier.txt    # Affiche les 10 premières lignes de "mon_fichier.txt"
+     tail mon_fichier.txt    # Affiche les 10 dernières lignes de "mon_fichier.txt"
+     head -n 20 mon_fichier.txt    # Affiche les 20 premières lignes
+     tail -n 20 mon_fichier.txt    # Affiche les 20 dernières lignes
+     ```
+
+#### **3.6 Recherche de Fichiers**
+
+1. **`find` : Rechercher des fichiers et répertoires**
+   - **Syntaxe** : `find chemin [options]`
+   - **Exemples** :
+     ```bash
+     find / -name "mon_fichier.txt"    # Recherche "mon_fichier.txt" à partir de la racine
+     find . -type d -name "mon_repertoire"    # Recherche un répertoire nommé "mon_repertoire" dans le répertoire courant
+     ```
+
+2. **`grep` : Rechercher du texte dans des fichiers**
+   - **Syntaxe** : `grep [options] motif fichier`
+   - **Exemples** :
+     ```bash
+     grep "motif" mon_fichier.txt    # Recherche "motif" dans "mon_fichier.txt"
+     grep -r "motif" /chemin         # Recherche récursivement "motif" dans tous les fichiers du répertoire spécifié
+     ```
+
+#### **3.7 Gestion des Permissions**
+
+1. **`chmod` : Modifier les permissions des fichiers**
+   - **Syntaxe** : `chmod [options] mode fichier`
+   - **Exemples** :
+     ```bash
+     chmod 755 mon_fichier.sh    # Donne les permissions rwxr-xr-x à "mon_fichier.sh"
+     chmod u+x mon_script.sh     # Ajoute la permission d'exécution pour le propriétaire
+     ```
+
+2. **`chown` : Changer le propriétaire d'un fichier**
+   - **Syntaxe** : `chown [options] propriétaire:fichier`
+   - **Exemples** :
+     ```bash
+     chown utilisateur mon_fichier.txt    # Change le propriétaire de "mon_fichier.txt"
+     chown utilisateur:groupe mon_fichier.txt    # Change le propriétaire et le groupe
+     ```
+
+#### **3.8 Compression et Archivage**
+
+1. **`tar` : Créer et extraire des archives**
+   - **Syntaxe** : `tar [options] archive fichier`
+   - **Exemples** :
+     ```bash
+     tar -cvf archive.tar fichier1 fichier2    # Crée une archive nommée "archive.tar" contenant "fichier1" et "fichier2"
+     tar -xvf archive.tar                      # Extrait les fichiers de "archive.tar"
+     ```
+
+2. **`gzip` et `gunzip` : Compresser et décompresser des fichiers**
+   - **Syntaxe** : `gzip fichier` et `gunzip fichier.gz`
+   - **Exemples** :
+     ```bash
+     gzip mon_fichier.txt    # Compresse "mon_fichier.txt" en "mon_fichier.txt.gz"
+     gunzip mon_fichier.txt.gz    # Décompresse "mon_fichier.txt.gz"
+     ```
+
+3. **`zip` et `unzip` : Compresser et décompresser des fichiers**
+   - **Syntaxe** : `zip archive.zip fichier` et `unzip archive.zip`
+   - **Exemples** :
+     ```bash
+     zip archive.zip fichier1 fichier2    # Crée une archive zip nommée "archive.zip" contenant "fichier1" et "fichier2"
+     unzip archive.zip                    # Extrait les fichiers de "archive.zip"
+     ```
+
+#### **3.9 Conclusion**
+
+La gestion des fichiers et des répertoires est une compétence essentielle pour tout utilisateur de Linux. En maîtrisant ces commandes, vous serez capable de créer, manipuler, organiser et sécuriser vos fichiers et répertoires de manière efficace.
+
+---
+
+Ce chapitre vous donne une introduction complète à la gestion des fichiers et répertoires sous Linux. Les chapitres suivants approfondiront ces concepts et introduiront des commandes et techniques plus avancées. Si vous avez des questions ou besoin de clarifications, n'hésitez pas à demander !

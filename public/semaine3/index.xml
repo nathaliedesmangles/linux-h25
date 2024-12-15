@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Semaine 3 : Éditeurs de texte :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine3/index.html</link>
+    <description>Plan et objectifs de la leçon Théorie :&#xA;Introduction à nano et vi Comparaison avec d’autres éditeurs de texte Atelier :&#xA;Création et modification de fichiers texte avec nano et vi</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine3/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

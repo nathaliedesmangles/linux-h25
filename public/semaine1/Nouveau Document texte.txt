@@ -1,0 +1,101 @@
+Bien sûr! Voici le plan de cours modifié avec 11 ateliers :
+
+### Semaine 1 : Introduction à Linux
+- **Théorie :**
+  - Qu'est-ce que Linux ?
+  - L'histoire de Linux et ses distributions
+  - Différence entre Linux et autres systèmes d'exploitation
+- **Atelier :**
+  - Installation de Linux sur une machine virtuelle
+
+### Semaine 2 : Les commandes de base
+- **Théorie :**
+  - Structure du système de fichiers Linux
+  - Commandes de navigation de base (ls, cd, pwd, etc.)
+- **Atelier :**
+  - Exercices pratiques sur les commandes de base
+
+### Semaine 3 : Gestion des fichiers et des répertoires
+- **Théorie :**
+  - Commandes de gestion des fichiers (cp, mv, rm, mkdir, etc.)
+  - Droits et permissions des fichiers
+- **Atelier :**
+  - Manipulation des fichiers et des répertoires
+
+### Semaine 4 : Éditeurs de texte
+- **Théorie :**
+  - Introduction à nano et vi
+  - Comparaison avec d'autres éditeurs de texte
+- **Atelier :**
+  - Création et modification de fichiers texte avec nano et vi
+
+### Semaine 5 : Gestion des utilisateurs et des groupes
+- **Théorie :**
+  - Création et gestion des utilisateurs et des groupes
+  - Compréhension des droits et permissions
+- **Atelier :**
+  - Configuration d'utilisateurs et de groupes sur un système Linux
+
+### Semaine 6 : Processus et gestion des tâches
+- **Théorie :**
+  - Comprendre les processus et les tâches
+  - Utilisation des commandes ps, top, kill, etc.
+- **Atelier :**
+  - Gestion des processus en temps réel
+
+### Semaine 7 : Révision et examen intermédiaire
+- **Théorie :**
+  - Révision des concepts clés des semaines précédentes
+- **Examen :**
+  - Examen couvrant les semaines 1 à 6
+
+### Semaine 8 : Gestion des paquets
+- **Théorie :**
+  - Introduction à la gestion des paquets
+  - Utilisation d'apt-get, yum, et autres gestionnaires de paquets
+- **Atelier :**
+  - Installation et gestion de logiciels via les gestionnaires de paquets
+
+### Semaine 9 : Réseaux et configuration
+- **Théorie :**
+  - Concepts de base des réseaux sous Linux
+  - Configuration réseau et outils de diagnostic
+- **Atelier :**
+  - Configuration réseau et résolution de problèmes
+
+### Semaine 10 : Sécurité de base
+- **Théorie :**
+  - Principes de sécurité sous Linux
+  - Configuration du pare-feu et gestion des droits
+- **Atelier :**
+  - Configuration de base pour sécuriser un système Linux
+
+### Semaine 11 : Scripting Shell
+- **Théorie :**
+  - Introduction au scripting Shell
+  - Écriture et exécution de scripts simples
+- **Atelier :**
+  - Création de scripts pour automatiser des tâches
+
+### Semaine 12 : Travaux pratiques 1
+- **Atelier :**
+  - Mise en pratique des connaissances acquises dans un projet complet
+
+### Semaine 13 : Administration avancée
+- **Théorie :**
+  - Concepts avancés d'administration système
+  - Automatisation et gestion des tâches
+- **Atelier :**
+  - Scénarios d'administration avancée
+
+### Semaine 14 : Travaux pratiques 2
+- **Atelier :**
+  - Deuxième projet pratique mettant en œuvre les concepts avancés
+
+### Semaine 15 : Révision finale et examen
+- **Théorie :**
+  - Révision des concepts clés des semaines précédentes
+- **Examen :**
+  - Examen couvrant l'ensemble du cours
+
+J'espère que ce plan modifié te convient mieux. Si tu as d'autres ajustements ou des questions, n'hésite pas à me le faire savoir !

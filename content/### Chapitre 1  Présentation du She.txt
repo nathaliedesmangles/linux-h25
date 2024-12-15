@@ -1,0 +1,91 @@
+### Chapitre 1 : Présentation du Shell
+
+#### **1.1 Qu'est-ce que le Shell ?**
+
+Le shell est une interface qui permet aux utilisateurs d'interagir avec le système d'exploitation. Il interprète les commandes saisies par l'utilisateur et les exécute. Le shell peut être vu comme un interpréteur de commandes qui traduit les instructions de l'utilisateur en actions compréhensibles par le système.
+
+#### **1.2 Types de Shell**
+
+Il existe plusieurs types de shells sous Linux, chacun ayant ses propres caractéristiques et fonctionnalités. Les plus courants sont :
+- **Bash (Bourne Again Shell)** : Le shell par défaut sur de nombreuses distributions Linux. Il est puissant et flexible.
+- **Sh (Bourne Shell)** : Un shell plus ancien, souvent utilisé pour des scripts de compatibilité.
+- **Csh (C Shell)** : Un shell avec une syntaxe inspirée du langage C.
+- **Ksh (Korn Shell)** : Un shell qui combine des fonctionnalités de Bourne Shell et de C Shell.
+- **Zsh (Z Shell)** : Un shell avancé avec de nombreuses fonctionnalités supplémentaires.
+
+#### **1.3 Lancement du Shell**
+
+Pour accéder au shell, vous pouvez ouvrir un terminal. Sur la plupart des distributions Linux, vous pouvez trouver le terminal dans le menu des applications ou en utilisant un raccourci clavier (par exemple, `Ctrl + Alt + T` sur Ubuntu).
+
+#### **1.4 Structure de Base d'une Commande**
+
+Une commande dans le shell suit généralement cette structure :
+```
+commande [options] [arguments]
+```
+- **commande** : Le programme ou l'outil que vous souhaitez exécuter.
+- **options** : Des paramètres supplémentaires qui modifient le comportement de la commande.
+- **arguments** : Les cibles sur lesquelles la commande doit agir (fichiers, répertoires, etc.).
+
+#### **1.5 Exemples de Commandes de Base**
+
+Voici quelques commandes de base pour vous familiariser avec le shell :
+
+- `ls` : Liste les fichiers et répertoires dans le répertoire courant.
+  ```bash
+  ls
+  ```
+
+- `cd` : Change le répertoire courant.
+  ```bash
+  cd /chemin/vers/repertoire
+  ```
+
+- `pwd` : Affiche le chemin du répertoire courant.
+  ```bash
+  pwd
+  ```
+
+- `mkdir` : Crée un nouveau répertoire.
+  ```bash
+  mkdir mon_repertoire
+  ```
+
+- `rm` : Supprime des fichiers ou des répertoires.
+  ```bash
+  rm mon_fichier
+  ```
+
+#### **1.6 Utilisation des Options**
+
+Les options permettent de modifier le comportement des commandes. Elles sont généralement précédées d'un tiret (`-`). Par exemple, pour lister tous les fichiers, y compris les fichiers cachés, vous pouvez utiliser l'option `-a` avec la commande `ls` :
+```bash
+ls -a
+```
+
+#### **1.7 Redirection et Pipes**
+
+Le shell permet de rediriger les entrées et sorties des commandes et de les chaîner ensemble à l'aide de pipes (`|`).
+
+- **Redirection de la sortie** : Utilisez `>` pour rediriger la sortie d'une commande vers un fichier.
+  ```bash
+  ls > liste_fichiers.txt
+  ```
+
+- **Redirection de l'entrée** : Utilisez `<` pour utiliser un fichier comme entrée d'une commande.
+  ```bash
+  sort < liste_fichiers.txt
+  ```
+
+- **Pipes** : Utilisez `|` pour envoyer la sortie d'une commande comme entrée d'une autre commande.
+  ```bash
+  ls | grep "mon_fichier"
+  ```
+
+#### **1.8 Conclusion**
+
+Le shell est un outil puissant qui permet une interaction flexible et efficace avec le système d'exploitation. En maîtrisant les commandes de base et les concepts de redirection et de pipes, vous pouvez automatiser de nombreuses tâches et améliorer votre productivité sous Linux.
+
+---
+
+Ce chapitre vous donne une introduction aux concepts fondamentaux du shell. Les chapitres suivants approfondiront ces concepts et introduiront des commandes et techniques plus avancées. Si vous avez des questions ou besoin de clarifications, n'hésitez pas à demander !

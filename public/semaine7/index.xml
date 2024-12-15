@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Semaine 7 : Les fichiers de configuration et examen formatif :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine7/index.html</link>
+    <description>Plan et objectifs de la leçon Théorie :&#xA;Comprendre les rôles des différents fichiers de configuration Savoir les manipuler dans un éditeur de fichiers texte. Examen formatif:&#xA;Examen couvrant les semaines 1 à 6 Peux tu développer le Chapitre 5 Structures de données Listes Tuples Dictionnaires Ensembles&#xA;[1] 5. Structures de données — Documentation Python 3.6.15 [2] Chapitre 5 informatique commune Listes et séquences</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine7/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

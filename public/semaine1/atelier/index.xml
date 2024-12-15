@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ATELIER: Installation de Linux sur une VM :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine1/atelier/index.html</link>
+    <description>A FAIRE Simplifier, mettre juste les grandes idées er objectifs Lin vers page de l’atelier Objectif Cet atelier a pour but de vous guider à travers le processus d’installation de Linux sur une machine virtuelle (VM). Cela permet d’expérimenter avec Linux sans affecter le système d’exploitation principal de l’ordinateur.&#xA;Prérequis pour l’installation Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.&#xA;VMware. Guide d’installation de VMWare Workstation Pro Vidéo YouTube: Télécharger et installer VMWare Vous devez avoir téléchargé la dernière version d’Alma Linux.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine1/atelier/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guide de téléchargement de VMWare Workstation 17</title>
+      <link>https://linux-h25.github.com/semaine1/atelier/telecharger-vmware/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://linux-h25.github.com/semaine1/atelier/telecharger-vmware/index.html</guid>
+      <description>Étapes de téléchargement Accéder au site de Broadcom: Rendez-vous sur le portail de support de Broadcom. Si vous avez déjà un compte, cliquez sur “Login” dans le coin supérieur droit pour créer un compte et connectez vous avec votre adresse e-mail et votre mot de passe. Créer un compte ou se connecter: Si vous n’avez pas encore de compte, cliquez sur “Register” dans le coin supérieur droit pour créer un compte.</description>
+    </item>
+    <item>
+      <title>Guide d&#39;installation de VMWare Workstation 17 sur Windows 10/11</title>
+      <link>https://linux-h25.github.com/semaine1/atelier/vmware/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://linux-h25.github.com/semaine1/atelier/vmware/index.html</guid>
+      <description>Prérequis Système d’exploitation: Windows 10 ou Windows 11. Connexion Internet pour télécharger les fichiers nécessaires. Droits administratifs sur votre machine. Étapes d’installation Télécharger VMWare Workstation 17 Pro:&#xA;Rendez-vous sur le site officiel de VMWare et téléchargez la version 17 Pro pour Windows. Créer un compte sur le site de Broadcom.com Exécuter le fichier d’installation:&#xA;Une fois le fichier téléchargé, double-cliquez dessus pour lancer l’installation. Si une fenêtre de contrôle de compte d’utilisateur (UAC) apparaît, cliquez sur “Oui” pour autoriser l’installation. Accepter les termes et conditions:</description>
+    </item>
+    <item>
+      <title>Guide d&#39;installation d&#39;AlmaLinux sur VMWare Workstation</title>
+      <link>https://linux-h25.github.com/semaine1/atelier/almalinux/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://linux-h25.github.com/semaine1/atelier/almalinux/index.html</guid>
+      <description>Prérequis VMWare Workstation 17 Pro installé sur votre machine. ISO d’AlmaLinux 9.5 que vous pouvez télécharger depuis le site officiel d’AlmaLinux. Connexion Internet pour télécharger les fichiers nécessaires. Étapes d’installation Télécharger l’ISO d’AlmaLinux 9.5:&#xA;Rendez-vous sur le site officiel d’AlmaLinux et téléchargez l’ISO correspondant à AlmaLinux 9.5. Le fichier téléchargé devrait se nommer AlmaLinux-9.5-x86_64-dvd.iso. (si la version actuelle est 9.5)</description>
+    </item>
+  </channel>
+</rss>

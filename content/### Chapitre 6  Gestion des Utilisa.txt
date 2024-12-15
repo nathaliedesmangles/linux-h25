@@ -1,0 +1,121 @@
+### Chapitre 6 : Gestion des Utilisateurs et Groupes
+
+#### **6.1 Introduction**
+
+La gestion des utilisateurs et des groupes est une tâche essentielle pour l'administration d'un système Linux. Elle permet de contrôler l'accès aux ressources du système et de maintenir la sécurité. Ce chapitre couvre les commandes et techniques pour créer, modifier et gérer les utilisateurs et les groupes.
+
+#### **6.2 Création et Suppression d'Utilisateurs**
+
+1. **`useradd` : Ajouter un nouvel utilisateur**
+   - **Syntaxe** : `useradd [options] nom_utilisateur`
+   - **Description** : Crée un nouvel utilisateur avec les options spécifiées.
+   - **Exemples** :
+     ```bash
+     sudo useradd alice    # Crée un utilisateur nommé "alice"
+     sudo useradd -m bob   # Crée un utilisateur nommé "bob" avec un répertoire personnel
+     ```
+
+2. **`userdel` : Supprimer un utilisateur**
+   - **Syntaxe** : `userdel [options] nom_utilisateur`
+   - **Description** : Supprime un utilisateur du système.
+   - **Exemples** :
+     ```bash
+     sudo userdel alice    # Supprime l'utilisateur "alice"
+     sudo userdel -r bob   # Supprime l'utilisateur "bob" et son répertoire personnel
+     ```
+
+#### **6.3 Modification des Utilisateurs**
+
+1. **`usermod` : Modifier un utilisateur existant**
+   - **Syntaxe** : `usermod [options] nom_utilisateur`
+   - **Description** : Modifie les attributs d'un utilisateur existant.
+   - **Exemples** :
+     ```bash
+     sudo usermod -l nouveau_nom alice    # Change le nom d'utilisateur de "alice" en "nouveau_nom"
+     sudo usermod -aG sudo bob            # Ajoute "bob" au groupe "sudo"
+     ```
+
+2. **`passwd` : Changer le mot de passe d'un utilisateur**
+   - **Syntaxe** : `passwd [nom_utilisateur]`
+   - **Description** : Change le mot de passe de l'utilisateur spécifié.
+   - **Exemples** :
+     ```bash
+     passwd                # Change le mot de passe de l'utilisateur courant
+     sudo passwd alice     # Change le mot de passe de l'utilisateur "alice"
+     ```
+
+#### **6.4 Gestion des Groupes**
+
+1. **`groupadd` : Ajouter un nouveau groupe**
+   - **Syntaxe** : `groupadd [options] nom_groupe`
+   - **Description** : Crée un nouveau groupe avec les options spécifiées.
+   - **Exemple** :
+     ```bash
+     sudo groupadd developpeurs    # Crée un groupe nommé "developpeurs"
+     ```
+
+2. **`groupdel` : Supprimer un groupe**
+   - **Syntaxe** : `groupdel nom_groupe`
+   - **Description** : Supprime un groupe du système.
+   - **Exemple** :
+     ```bash
+     sudo groupdel developpeurs    # Supprime le groupe "developpeurs"
+     ```
+
+3. **`groupmod` : Modifier un groupe existant**
+   - **Syntaxe** : `groupmod [options] nom_groupe`
+   - **Description** : Modifie les attributs d'un groupe existant.
+   - **Exemple** :
+     ```bash
+     sudo groupmod -n nouveau_nom developpeurs    # Change le nom du groupe "developpeurs" en "nouveau_nom"
+     ```
+
+#### **6.5 Gestion des Membres de Groupes**
+
+1. **`gpasswd` : Administrer les membres d'un groupe**
+   - **Syntaxe** : `gpasswd [options] nom_groupe`
+   - **Description** : Ajoute ou supprime des utilisateurs d'un groupe.
+   - **Exemples** :
+     ```bash
+     sudo gpasswd -a alice developpeurs    # Ajoute "alice" au groupe "developpeurs"
+     sudo gpasswd -d bob developpeurs      # Supprime "bob" du groupe "developpeurs"
+     ```
+
+2. **`newgrp` : Changer de groupe actif**
+   - **Syntaxe** : `newgrp nom_groupe`
+   - **Description** : Change le groupe actif de l'utilisateur courant.
+   - **Exemple** :
+     ```bash
+     newgrp developpeurs    # Change le groupe actif en "developpeurs"
+     ```
+
+#### **6.6 Fichiers de Configuration des Utilisateurs et Groupes**
+
+1. **`/etc/passwd` : Fichier des utilisateurs**
+   - **Description** : Contient les informations sur les utilisateurs du système.
+   - **Exemple de ligne** :
+     ```plaintext
+     alice:x:1001:1001:Alice:/home/alice:/bin/bash
+     ```
+
+2. **`/etc/shadow` : Fichier des mots de passe**
+   - **Description** : Contient les mots de passe chiffrés et les informations de sécurité des utilisateurs.
+   - **Exemple de ligne** :
+     ```plaintext
+     alice:$6$randomsalt$encryptedpassword:18522:0:99999:7:::
+     ```
+
+3. **`/etc/group` : Fichier des groupes**
+   - **Description** : Contient les informations sur les groupes du système.
+   - **Exemple de ligne** :
+     ```plaintext
+     developpeurs:x:1002:alice,bob
+     ```
+
+#### **6.7 Conclusion**
+
+La gestion des utilisateurs et des groupes est cruciale pour maintenir la sécurité et l'organisation d'un système Linux. En maîtrisant ces commandes, vous serez capable de créer, modifier et gérer efficacement les utilisateurs et les groupes sur votre système.
+
+---
+
+Ce chapitre vous donne une introduction complète à la gestion des utilisateurs et des groupes sous Linux. Les chapitres suivants approfondiront ces concepts et introduiront des commandes et techniques plus avancées. Si vous avez des questions ou besoin de clarifications, n'hésitez pas à demander !

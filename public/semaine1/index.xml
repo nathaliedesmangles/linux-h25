@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction à Linux :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine1/index.html</link>
+    <description>Plan et objectifs de la leçon Présentation du cours (plan de cours)&#xA;Pondération Objectifs Evaluations formatives Évaluations sommatives Politiques institutionnelles (absences, retards, plagiat, révision de note) Théorie :&#xA;Généralités sur le système d’exploitation Linux Atelier :&#xA;Installation de Linux sur une machine virtuelle</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qu&#39;est-ce que Linux ?</title>
+      <link>https://linux-h25.github.com/semaine1/qu-est-ce-que-linux/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://linux-h25.github.com/semaine1/qu-est-ce-que-linux/index.html</guid>
+      <description>Qu’est-ce que Linux ? Définition&#xD;Linux est un système d’exploitation puissant et flexible qui offre de nombreux avantages, notamment en termes de sécurité, de stabilité, et de personnalisation.&#xA;Que ce soit pour un usage personnel, professionnel, ou pour des serveurs, Linux est une option solide et fiable.&#xA;Un peu d’histoire 1991 : Créé par Linus Torvalds et est basé sur le système Unix. 1992 : Le noyau Linux a été re-licencié sous la licence publique générale GNU (GPL), ce qui a renforcé son statut de logiciel libre. 1994 : La version 1.0 du noyau Linux a été publiée, marquant une étape importante dans son développement. Depuis sa création, Linux est devenu l’un des systèmes d’exploitation les plus populaires, notamment pour les serveurs, les superordinateurs, et les appareils embarqués.</description>
+    </item>
+    <item>
+      <title>ATELIER: Installation de Linux sur une VM</title>
+      <link>https://linux-h25.github.com/semaine1/atelier/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://linux-h25.github.com/semaine1/atelier/index.html</guid>
+      <description>A FAIRE Simplifier, mettre juste les grandes idées er objectifs Lin vers page de l’atelier Objectif Cet atelier a pour but de vous guider à travers le processus d’installation de Linux sur une machine virtuelle (VM). Cela permet d’expérimenter avec Linux sans affecter le système d’exploitation principal de l’ordinateur.&#xA;Prérequis pour l’installation Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.&#xA;VMware. Guide d’installation de VMWare Workstation Pro Vidéo YouTube: Télécharger et installer VMWare Vous devez avoir téléchargé la dernière version d’Alma Linux.</description>
+    </item>
+  </channel>
+</rss>

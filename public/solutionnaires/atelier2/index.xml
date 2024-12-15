@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ATELIER02: Les commandes Linux de base (SOLUTION) :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/solutionnaires/atelier2/index.html</link>
+    <description>Exercices pratiques Afficher la date et l’heure actuelles du système&#xA;date&#xD;Changer le mot de passe de l’utilisateur&#xA;passwd&#xD;Afficher le contenu d’un fichier.&#xA;Créez un fichier texte avec du contenu : echo &#34;Bonjour, Linux!&#34; &gt; fichier.txt&#xD;Tapez la commande suivante pour afficher le contenu du fichier et appuyez sur Entrée : cat fichier.txt&#xD;Observez la sortie qui affiche le contenu du fichier. Afficher le contenu d’un fichier page par page.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/solutionnaires/atelier2/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

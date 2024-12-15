@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Semaine 14 : Travaux pratiques 2 :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine14/index.html</link>
+    <description>Plan et objectifs de la leçon Atelier : Deuxième projet pratique mettant en œuvre les concepts avancés</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine14/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

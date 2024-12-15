@@ -1,0 +1,135 @@
+### Chapitre 2 : Commandes de Base
+
+#### **2.1 Introduction**
+
+Les commandes de base du shell Linux sont essentielles pour naviguer dans le système de fichiers, manipuler les fichiers et répertoires, et effectuer des tâches courantes. Ce chapitre couvre les commandes les plus utilisées et leurs options principales.
+
+#### **2.2 Commandes de Navigation**
+
+1. **`ls` : Lister les fichiers et répertoires**
+   - **Syntaxe** : `ls [options] [répertoire]`
+   - **Exemples** :
+     ```bash
+     ls          # Liste les fichiers du répertoire courant
+     ls -a       # Inclut les fichiers cachés
+     ls -l       # Affiche les détails des fichiers
+     ls /home    # Liste les fichiers du répertoire /home
+     ```
+
+2. **`cd` : Changer de répertoire**
+   - **Syntaxe** : `cd [répertoire]`
+   - **Exemples** :
+     ```bash
+     cd /home/utilisateur    # Change le répertoire courant
+     cd ..                   # Remonte d'un niveau dans l'arborescence
+     cd ~                    # Va dans le répertoire personnel
+     ```
+
+3. **`pwd` : Afficher le répertoire courant**
+   - **Syntaxe** : `pwd`
+   - **Exemple** :
+     ```bash
+     pwd    # Affiche le chemin complet du répertoire courant
+     ```
+
+#### **2.3 Commandes de Manipulation des Fichiers et Répertoires**
+
+1. **`mkdir` : Créer un répertoire**
+   - **Syntaxe** : `mkdir [options] répertoire`
+   - **Exemples** :
+     ```bash
+     mkdir mon_repertoire          # Crée un répertoire nommé "mon_repertoire"
+     mkdir -p chemin/complet       # Crée un répertoire et ses parents si nécessaire
+     ```
+
+2. **`rmdir` : Supprimer un répertoire vide**
+   - **Syntaxe** : `rmdir répertoire`
+   - **Exemple** :
+     ```bash
+     rmdir mon_repertoire    # Supprime le répertoire "mon_repertoire" s'il est vide
+     ```
+
+3. **`touch` : Créer un fichier vide ou mettre à jour l'horodatage**
+   - **Syntaxe** : `touch fichier`
+   - **Exemple** :
+     ```bash
+     touch mon_fichier.txt    # Crée un fichier vide nommé "mon_fichier.txt"
+     ```
+
+4. **`rm` : Supprimer des fichiers ou des répertoires**
+   - **Syntaxe** : `rm [options] fichier`
+   - **Exemples** :
+     ```bash
+     rm mon_fichier.txt       # Supprime le fichier "mon_fichier.txt"
+     rm -r mon_repertoire     # Supprime le répertoire "mon_repertoire" et son contenu
+     rm -f mon_fichier.txt    # Force la suppression sans confirmation
+     ```
+
+5. **`cp` : Copier des fichiers ou des répertoires**
+   - **Syntaxe** : `cp [options] source destination`
+   - **Exemples** :
+     ```bash
+     cp fichier1 fichier2             # Copie "fichier1" vers "fichier2"
+     cp -r repertoire1 repertoire2    # Copie le répertoire "repertoire1" vers "repertoire2"
+     ```
+
+6. **`mv` : Déplacer ou renommer des fichiers ou des répertoires**
+   - **Syntaxe** : `mv [options] source destination`
+   - **Exemples** :
+     ```bash
+     mv fichier1 fichier2             # Renomme "fichier1" en "fichier2"
+     mv fichier1 /chemin/vers/dossier # Déplace "fichier1" vers un autre répertoire
+     ```
+
+#### **2.4 Affichage et Lecture de Fichiers**
+
+1. **`cat` : Afficher le contenu d'un fichier**
+   - **Syntaxe** : `cat fichier`
+   - **Exemple** :
+     ```bash
+     cat mon_fichier.txt    # Affiche le contenu de "mon_fichier.txt"
+     ```
+
+2. **`more` et `less` : Lire un fichier page par page**
+   - **Syntaxe** : `more fichier` ou `less fichier`
+   - **Exemples** :
+     ```bash
+     more mon_fichier.txt    # Affiche le contenu de "mon_fichier.txt" page par page
+     less mon_fichier.txt    # Idem, mais avec plus de fonctionnalités de navigation
+     ```
+
+3. **`head` et `tail` : Afficher les premières ou dernières lignes d'un fichier**
+   - **Syntaxe** : `head [options] fichier` ou `tail [options] fichier`
+   - **Exemples** :
+     ```bash
+     head mon_fichier.txt    # Affiche les 10 premières lignes de "mon_fichier.txt"
+     tail mon_fichier.txt    # Affiche les 10 dernières lignes de "mon_fichier.txt"
+     head -n 20 mon_fichier.txt    # Affiche les 20 premières lignes
+     tail -n 20 mon_fichier.txt    # Affiche les 20 dernières lignes
+     ```
+
+#### **2.5 Gestion des Permissions**
+
+1. **`chmod` : Modifier les permissions des fichiers**
+   - **Syntaxe** : `chmod [options] mode fichier`
+   - **Exemples** :
+     ```bash
+     chmod 755 mon_fichier.sh    # Donne les permissions rwxr-xr-x à "mon_fichier.sh"
+     chmod u+x mon_script.sh     # Ajoute la permission d'exécution pour le propriétaire
+     ```
+
+2. **`chown` : Changer le propriétaire d'un fichier**
+   - **Syntaxe** : `chown [options] propriétaire:fichier`
+   - **Exemples** :
+     ```bash
+     chown utilisateur mon_fichier.txt    # Change le propriétaire de "mon_fichier.txt"
+     chown utilisateur:groupe mon_fichier.txt    # Change le propriétaire et le groupe
+     ```
+
+#### **2.6 Conclusion**
+
+Les commandes de base du shell Linux sont les fondations sur lesquelles vous pouvez construire des compétences plus avancées. En maîtrisant ces commandes, vous serez capable de naviguer dans le système de fichiers, de manipuler des fichiers et des répertoires, et de gérer les permissions de manière efficace.
+
+---
+
+Ce chapitre vous donne une introduction aux commandes de base du shell Linux. Les chapitres suivants approfondiront ces concepts et introduiront des commandes et techniques plus avancées. Si vous avez des questions ou besoin de clarifications, n'hésitez pas à demander !

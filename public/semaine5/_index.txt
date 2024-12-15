@@ -1,0 +1,14 @@
++++
+title = "Semaine 5 : Gestion des utilisateurs et des groupes"
+type = "chapter"
+weight = 50
++++
+
+## Plan et objectifs de la leçon
+
+- **Théorie :**
+  - Création et gestion des utilisateurs et des groupes
+  - Compréhension des droits et permissions
+
+- **Atelier :**
+  - Configuration d'utilisateurs et de groupes sur un système Linux

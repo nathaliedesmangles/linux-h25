@@ -1,0 +1,10 @@
+Ligne 1: Ceci est une ligne de texte pour pratiquer les commandes.
+Ligne 2: La commande cat affiche le contenu d'un fichier.
+Ligne 3: La commande less permet de visualiser le contenu d'un fichier page par page.
+Ligne 4: La commande head affiche les premières lignes d'un fichier.
+Ligne 5: La commande tail affiche les dernières lignes d'un fichier.
+Ligne 6: Le point-virgule (;) permet d'exécuter plusieurs commandes sur une seule ligne.
+Ligne 7: La commande wc compte les lignes, mots et caractères d'un fichier.
+Ligne 8: La tabulation permet de compléter rapidement les commandes et les noms de fichiers.
+Ligne 9: La commande history affiche la liste des commandes précédemment exécutées.
+Ligne 10: Fin du fichier pour les exercices de commandes.

@@ -1,0 +1,15 @@
++++
+chapter = true
+pre = "<b>Semaine 3. </b>"
+title = "Gestion des fichiers et des répertoires"
+weight = 30
++++
+
+## Plan et objectifs de la leçon
+
+- **Théorie :**
+  - Commandes de gestion des fichiers (cp, mv, rm, mkdir, etc.)
+  - Droits et permissions des fichiers
+
+- **Atelier :**
+  - Manipulation des fichiers et des répertoires

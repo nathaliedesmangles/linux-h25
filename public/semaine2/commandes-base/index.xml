@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Commandes de navigation de base sous Linux :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine2/commandes-base/index.html</link>
+    <description>Naviguer dans le système de fichiers Linux est une compétence essentielle pour tout utilisateur. Dans cette leçon vous apprendrez sur les commandes de base qui vous permettront de vous déplacer et de gérer les fichiers et répertoires dans un environnement Linux.&#xA;Commandes de base pwd (print working directory)&#xA;Description : Affiche le chemin complet du répertoire courant. pwd&#xD;Exemple de résultat : /home/utilisateur&#xD;ls (list)&#xA;Description : Liste les fichiers et répertoires dans le répertoire courant. ls&#xD;Options courantes : ls -l : Affiche les détails des fichiers et répertoires (permissions, propriétaire, taille, etc.). ls -a : Affiche tous les fichiers, y compris les fichiers cachés (ceux commençant par un point). ls -lh : Affiche les tailles de fichiers dans un format lisible (Ko, Mo, Go). Exemple : ls -l total 12 drwxr-xr-x 2 utilisateur utilisateur 4096 jan 1 12:00 Documents -rw-r--r-- 1 utilisateur utilisateur 123 jan 1 12:00 fichier.txt&#xD;cd (change directory)</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine2/commandes-base/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

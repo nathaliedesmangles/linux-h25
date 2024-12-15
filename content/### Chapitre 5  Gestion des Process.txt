@@ -1,0 +1,130 @@
+### Chapitre 5 : Gestion des Processus
+
+#### **5.1 Introduction**
+
+La gestion des processus est une compétence essentielle pour tout utilisateur de Linux. Un processus est une instance d'un programme en cours d'exécution. Ce chapitre couvre les commandes et techniques pour surveiller, contrôler et gérer les processus sous Linux.
+
+#### **5.2 Affichage des Processus**
+
+1. **`ps` : Afficher les processus en cours**
+   - **Syntaxe** : `ps [options]`
+   - **Description** : Affiche une liste des processus en cours d'exécution.
+   - **Exemples** :
+     ```bash
+     ps            # Affiche les processus de l'utilisateur courant dans le terminal
+     ps aux        # Affiche tous les processus en cours sur le système
+     ps -ef        # Affiche une liste détaillée de tous les processus
+     ```
+
+2. **`top` : Surveiller les processus en temps réel**
+   - **Syntaxe** : `top`
+   - **Description** : Affiche les processus en cours et leur utilisation des ressources en temps réel.
+   - **Exemple** :
+     ```bash
+     top    # Lance l'interface de surveillance des processus en temps réel
+     ```
+
+3. **`htop` : Surveiller les processus en temps réel avec une interface améliorée**
+   - **Syntaxe** : `htop`
+   - **Description** : Une version améliorée de `top` avec une interface utilisateur plus conviviale.
+   - **Exemple** :
+     ```bash
+     htop    # Lance l'interface de surveillance des processus en temps réel
+     ```
+
+#### **5.3 Gestion des Processus**
+
+1. **`kill` : Terminer un processus**
+   - **Syntaxe** : `kill [options] PID`
+   - **Description** : Envoie un signal pour terminer un processus spécifié par son PID (Process ID).
+   - **Exemples** :
+     ```bash
+     kill 1234          # Envoie le signal par défaut (SIGTERM) pour terminer le processus avec le PID 1234
+     kill -9 1234       # Envoie le signal SIGKILL pour forcer la terminaison du processus
+     ```
+
+2. **`pkill` : Terminer des processus par nom**
+   - **Syntaxe** : `pkill [options] nom`
+   - **Description** : Envoie un signal pour terminer les processus correspondant à un nom spécifié.
+   - **Exemple** :
+     ```bash
+     pkill firefox    # Termine tous les processus nommés "firefox"
+     ```
+
+3. **`killall` : Terminer tous les processus par nom**
+   - **Syntaxe** : `killall [options] nom`
+   - **Description** : Envoie un signal pour terminer tous les processus correspondant à un nom spécifié.
+   - **Exemple** :
+     ```bash
+     killall firefox    # Termine tous les processus nommés "firefox"
+     ```
+
+#### **5.4 Priorité des Processus**
+
+1. **`nice` : Lancer un processus avec une priorité modifiée**
+   - **Syntaxe** : `nice [options] commande`
+   - **Description** : Lance une commande avec une priorité modifiée.
+   - **Exemple** :
+     ```bash
+     nice -n 10 commande    # Lance "commande" avec une priorité de 10
+     ```
+
+2. **`renice` : Modifier la priorité d'un processus en cours**
+   - **Syntaxe** : `renice priorité -p PID`
+   - **Description** : Modifie la priorité d'un processus en cours spécifié par son PID.
+   - **Exemple** :
+     ```bash
+     renice 10 -p 1234    # Modifie la priorité du processus avec le PID 1234 à 10
+     ```
+
+#### **5.5 Gestion des Processus en Arrière-plan et en Avant-plan**
+
+1. **`&` : Lancer un processus en arrière-plan**
+   - **Syntaxe** : `commande &`
+   - **Description** : Lance une commande en arrière-plan, permettant de continuer à utiliser le terminal.
+   - **Exemple** :
+     ```bash
+     firefox &    # Lance Firefox en arrière-plan
+     ```
+
+2. **`bg` : Reprendre un processus en arrière-plan**
+   - **Syntaxe** : `bg [job_spec]`
+   - **Description** : Reprend un processus suspendu en arrière-plan.
+   - **Exemple** :
+     ```bash
+     bg %1    # Reprend le job 1 en arrière-plan
+     ```
+
+3. **`fg` : Reprendre un processus en avant-plan**
+   - **Syntaxe** : `fg [job_spec]`
+   - **Description** : Reprend un processus suspendu en avant-plan.
+   - **Exemple** :
+     ```bash
+     fg %1    # Reprend le job 1 en avant-plan
+     ```
+
+4. **`jobs` : Afficher les processus en arrière-plan**
+   - **Syntaxe** : `jobs`
+   - **Description** : Affiche la liste des processus en arrière-plan et suspendus.
+   - **Exemple** :
+     ```bash
+     jobs    # Affiche les jobs en cours
+     ```
+
+#### **5.6 Surveillance des Processus**
+
+1. **`watch` : Exécuter une commande périodiquement**
+   - **Syntaxe** : `watch [options] commande`
+   - **Description** : Exécute une commande à intervalles réguliers et affiche la sortie.
+   - **Exemple** :
+     ```bash
+     watch -n 5 df -h    # Exécute `df -h` toutes les 5 secondes pour surveiller l'utilisation du disque
+     ```
+
+#### **5.7 Conclusion**
+
+La gestion des processus est une compétence cruciale pour administrer un système Linux. En maîtrisant ces commandes, vous serez capable de surveiller, contrôler et optimiser l'exécution des processus sur votre système.
+
+---
+
+Ce chapitre vous donne une introduction complète à la gestion des processus sous Linux. Les chapitres suivants approfondiront ces concepts et introduiront des commandes et techniques plus avancées. Si vous avez des questions ou besoin de clarifications, n'hésitez pas à demander !

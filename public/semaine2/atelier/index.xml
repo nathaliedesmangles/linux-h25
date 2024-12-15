@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ATELIER: Les commandes Linux de base :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine2/atelier/index.html</link>
+    <description>Objectif de l’atelier Cet atelier a pour but de vous familiariser avec les commandes simples et de base sous Linux en utilisant Ubuntu comme distribution Linux. Les exercices pratiques permettront de renforcer la compréhension et l’utilisation de ces commandes.&#xA;Attention&#xD;Votre Windows 10/11 de votre VM doit être à jour.&#xA;Préalables Mettre à jour Windows Pour Windows 10:&#xA;Cliquer sur Mise à jour de Windows 10 et cliquer sur Mettre à jour maintenant.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine2/atelier/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

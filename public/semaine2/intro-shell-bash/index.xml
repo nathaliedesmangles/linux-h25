@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exécution de commandes à l’aide du Shell Bash :: 420-ZG4-MO</title>
+    <link>https://linux-h25.github.com/semaine2/intro-shell-bash/index.html</link>
+    <description>Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d’exploitation Unix et Linux. Il permet aux utilisateurs d’exécuter des commandes pour interagir avec le système d’exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l’exécution de commandes simples à l’aide du shell Bash.&#xA;La ligne de commande Ligne de commande: La ligne de commande est l’interface où vous tapez vos commandes. Elle est souvent représentée par un symbole $ ou # pour les utilisateurs root. Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante. Exemple:</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="https://linux-h25.github.com/semaine2/intro-shell-bash/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

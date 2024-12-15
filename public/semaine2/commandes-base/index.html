@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.135.0">
+    <meta name="generator" content="Relearn 7.2.1">
+    <meta name="description" content="Naviguer dans le système de fichiers Linux est une compétence essentielle pour tout utilisateur. Dans cette leçon vous apprendrez sur les commandes de base qui vous permettront de vous déplacer et de gérer les fichiers et répertoires dans un environnement Linux.
+Commandes de base pwd (print working directory)
+Description : Affiche le chemin complet du répertoire courant. pwdExemple de résultat : /home/utilisateurls (list)
+Description : Liste les fichiers et répertoires dans le répertoire courant. lsOptions courantes : ls -l : Affiche les détails des fichiers et répertoires (permissions, propriétaire, taille, etc.). ls -a : Affiche tous les fichiers, y compris les fichiers cachés (ceux commençant par un point). ls -lh : Affiche les tailles de fichiers dans un format lisible (Ko, Mo, Go). Exemple : ls -l total 12 drwxr-xr-x 2 utilisateur utilisateur 4096 jan 1 12:00 Documents -rw-r--r-- 1 utilisateur utilisateur 123 jan 1 12:00 fichier.txtcd (change directory)">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Commandes de navigation de base sous Linux :: 420-ZG4-MO">
+    <meta name="twitter:description" content="Naviguer dans le système de fichiers Linux est une compétence essentielle pour tout utilisateur. Dans cette leçon vous apprendrez sur les commandes de base qui vous permettront de vous déplacer et de gérer les fichiers et répertoires dans un environnement Linux.
+Commandes de base pwd (print working directory)
+Description : Affiche le chemin complet du répertoire courant. pwdExemple de résultat : /home/utilisateurls (list)
+Description : Liste les fichiers et répertoires dans le répertoire courant. lsOptions courantes : ls -l : Affiche les détails des fichiers et répertoires (permissions, propriétaire, taille, etc.). ls -a : Affiche tous les fichiers, y compris les fichiers cachés (ceux commençant par un point). ls -lh : Affiche les tailles de fichiers dans un format lisible (Ko, Mo, Go). Exemple : ls -l total 12 drwxr-xr-x 2 utilisateur utilisateur 4096 jan 1 12:00 Documents -rw-r--r-- 1 utilisateur utilisateur 123 jan 1 12:00 fichier.txtcd (change directory)">
+    <meta property="og:url" content="https://linux-h25.github.com/semaine2/commandes-base/index.html">
+    <meta property="og:site_name" content="420-ZG4-MO">
+    <meta property="og:title" content="Commandes de navigation de base sous Linux :: 420-ZG4-MO">
+    <meta property="og:description" content="Naviguer dans le système de fichiers Linux est une compétence essentielle pour tout utilisateur. Dans cette leçon vous apprendrez sur les commandes de base qui vous permettront de vous déplacer et de gérer les fichiers et répertoires dans un environnement Linux.
+Commandes de base pwd (print working directory)
+Description : Affiche le chemin complet du répertoire courant. pwdExemple de résultat : /home/utilisateurls (list)
+Description : Liste les fichiers et répertoires dans le répertoire courant. lsOptions courantes : ls -l : Affiche les détails des fichiers et répertoires (permissions, propriétaire, taille, etc.). ls -a : Affiche tous les fichiers, y compris les fichiers cachés (ceux commençant par un point). ls -lh : Affiche les tailles de fichiers dans un format lisible (Ko, Mo, Go). Exemple : ls -l total 12 drwxr-xr-x 2 utilisateur utilisateur 4096 jan 1 12:00 Documents -rw-r--r-- 1 utilisateur utilisateur 123 jan 1 12:00 fichier.txtcd (change directory)">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Commandes de navigation de base sous Linux :: 420-ZG4-MO">
+    <meta itemprop="description" content="Naviguer dans le système de fichiers Linux est une compétence essentielle pour tout utilisateur. Dans cette leçon vous apprendrez sur les commandes de base qui vous permettront de vous déplacer et de gérer les fichiers et répertoires dans un environnement Linux.
+Commandes de base pwd (print working directory)
+Description : Affiche le chemin complet du répertoire courant. pwdExemple de résultat : /home/utilisateurls (list)
+Description : Liste les fichiers et répertoires dans le répertoire courant. lsOptions courantes : ls -l : Affiche les détails des fichiers et répertoires (permissions, propriétaire, taille, etc.). ls -a : Affiche tous les fichiers, y compris les fichiers cachés (ceux commençant par un point). ls -lh : Affiche les tailles de fichiers dans un format lisible (Ko, Mo, Go). Exemple : ls -l total 12 drwxr-xr-x 2 utilisateur utilisateur 4096 jan 1 12:00 Documents -rw-r--r-- 1 utilisateur utilisateur 123 jan 1 12:00 fichier.txtcd (change directory)">
+    <meta itemprop="wordCount" content="415">
+    <title>Commandes de navigation de base sous Linux :: 420-ZG4-MO</title>
+    <link href="/semaine2/commandes-base/index.xml" rel="alternate" type="application/rss+xml" title="Commandes de navigation de base sous Linux :: 420-ZG4-MO">
+    <link href="/css/fontawesome-all.min.css?1734277356" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734277356" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1734277356" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734277356" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1734277356" rel="stylesheet">
+    <link href="/css/theme.min.css?1734277356" rel="stylesheet">
+    <link href="/css/format-html.min.css?1734277356" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/linux-h25.github.com';
+      window.relearn.min = `.min`;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/semaine2/commandes-base/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#commandes-de-base">Commandes de base</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">420-ZG4-MO Système d’exploitation Linux</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/semaine2/index.html"><span itemprop="name">Les commandes de base</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Commandes de navigation de base sous Linux</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine2/systeme-fichiers/index.html" title="Structure du système de fichiers Linux (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine2/atelier/index.html" title="ATELIER: Les commandes Linux de base (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable semaine2" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="commandes-de-navigation-de-base-sous-linux">Commandes de navigation de base sous Linux</h1>
+
+<p>Naviguer dans le système de fichiers Linux est une compétence essentielle pour tout utilisateur. Dans cette leçon vous apprendrez sur les commandes de base qui vous permettront de vous déplacer et de gérer les fichiers et répertoires dans un environnement Linux.</p>
+<h2 id="commandes-de-base">Commandes de base</h2>
+<ol>
+<li>
+<p><strong>pwd (print working directory)</strong></p>
+<ul>
+<li><strong>Description</strong> : Affiche le chemin complet du répertoire courant.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pwd</span></span></code></pre></div>
+</li>
+<li><strong>Exemple de résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/home/utilisateur</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ls (list)</strong></p>
+<ul>
+<li><strong>Description</strong> : Liste les fichiers et répertoires dans le répertoire courant.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls</span></span></code></pre></div>
+</li>
+<li><strong>Options courantes</strong> :
+<ul>
+<li><code>ls -l</code> : Affiche les détails des fichiers et répertoires (permissions, propriétaire, taille, etc.).</li>
+<li><code>ls -a</code> : Affiche tous les fichiers, y compris les fichiers cachés (ceux commençant par un point).</li>
+<li><code>ls -lh</code> : Affiche les tailles de fichiers dans un format lisible (Ko, Mo, Go).</li>
+</ul>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">2</span> utilisateur utilisateur <span style="color:#ae81ff">4096</span> jan  <span style="color:#ae81ff">1</span> 12:00 Documents
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> utilisateur utilisateur  <span style="color:#ae81ff">123</span> jan  <span style="color:#ae81ff">1</span> 12:00 fichier.txt</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>cd (change directory)</strong></p>
+<ul>
+<li><strong>Description</strong> : Change le répertoire courant.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /chemin/vers/repertoire</span></span></code></pre></div>
+</li>
+<li><strong>Commandes utiles</strong> :
+<ul>
+<li><code>cd ..</code> : Remonte d&rsquo;un niveau dans l&rsquo;arborescence des répertoires.</li>
+<li><code>cd ~</code> : Va directement au répertoire personnel de l&rsquo;utilisateur.</li>
+<li><code>cd -</code> : Revient au répertoire précédent.</li>
+</ul>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/utilisateur/Documents</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>mkdir (make directory)</strong></p>
+<ul>
+<li><strong>Description</strong> : Crée un nouveau répertoire.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir nom_du_repertoire</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir Projets</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>rmdir (remove directory)</strong></p>
+<ul>
+<li><strong>Description</strong> : Supprime un répertoire vide.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rmdir nom_du_repertoire</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rmdir Projets</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>rm (remove)</strong></p>
+<ul>
+<li><strong>Description</strong> : Supprime des fichiers ou des répertoires.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm nom_du_fichier</span></span></code></pre></div>
+</li>
+<li><strong>Options courantes</strong> :
+<ul>
+<li><code>rm -r</code> : Supprime un répertoire et son contenu de manière récursive.</li>
+<li><code>rm -f</code> : Force la suppression sans demander de confirmation.</li>
+</ul>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm fichier.txt
+</span></span><span style="display:flex;"><span>rm -r dossier</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>touch</strong></p>
+<ul>
+<li><strong>Description</strong> : Crée un nouveau fichier vide ou met à jour l&rsquo;horodatage d&rsquo;un fichier existant.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch fichier.txt</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch fichier.txt</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>(Aucun résultat visible, mais le fichier est créé ou mis à jour)</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>echo</strong></p>
+<ul>
+<li><strong>Description</strong> : Affiche une ligne de texte ou une variable à l&rsquo;écran ou dans un fichier.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Bonjour, ceci est un test.&#34;</span> &gt; fichier.txt</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Bonjour, ceci est un test.&#34;</span> &gt; fichier.txt</span></span></code></pre></div>
+</li>
+<li><strong>Résultat</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>(Le texte &#34;Bonjour, ceci est un test.&#34; est écrit dans le fichier fichier.txt)</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>cp (copy)</strong></p>
+<ul>
+<li><strong>Description</strong> : Copie des fichiers ou des répertoires.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp source destination</span></span></code></pre></div>
+</li>
+<li><strong>Options courantes</strong> :
+<ul>
+<li><code>cp -r</code> : Copie un répertoire et son contenu de manière récursive.</li>
+</ul>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp fichier.txt copie_fichier.txt
+</span></span><span style="display:flex;"><span>cp -r dossier copie_dossier</span></span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>mv (move)</strong></p>
+</li>
+</ol>
+<ul>
+<li><strong>Description</strong> : Déplace ou renomme des fichiers ou des répertoires.
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv source destination</span></span></code></pre></div>
+</li>
+<li><strong>Exemple</strong> :
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv fichier.txt nouveau_nom.txt
+</span></span><span style="display:flex;"><span>mv dossier /nouveau/chemin/</span></span></code></pre></div>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+420-ZG4-MO
+          </a>
+        </div>
+        <script>
+          window.index_js_url="/searchindex.en.js?1734277356";
+        </script>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/js/auto-complete.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.fr.min.js?1734277356" defer></script>
+        <script src="/js/search.js?1734277356" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/semaine1/index.html"><a class="padding" href="/semaine1/index.html"><b>Semaine 1. </b>Introduction à Linux</a><ul id="R-subsections-6db614d031e1cac329e6c8b2f083c50f" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/semaine2/index.html"><a class="padding" href="/semaine2/index.html"><b>Semaine 2. </b>Les commandes de base</a><ul id="R-subsections-30aa4391f5b81ccda88d9d93cb48f88e" class="collapsible-menu">
+            <li class="" data-nav-id="/semaine2/intro-shell-bash/index.html"><a class="padding" href="/semaine2/intro-shell-bash/index.html">Exécution de commandes à l’aide du Shell Bash</a></li>
+            <li class="" data-nav-id="/semaine2/systeme-fichiers/index.html"><a class="padding" href="/semaine2/systeme-fichiers/index.html">Structure du système de fichiers Linux</a></li>
+            <li class="active " data-nav-id="/semaine2/commandes-base/index.html"><a class="padding" href="/semaine2/commandes-base/index.html">Commandes de navigation de base sous Linux</a></li>
+            <li class="" data-nav-id="/semaine2/atelier/index.html"><a class="padding" href="/semaine2/atelier/index.html">ATELIER: Les commandes Linux de base</a></li></ul></li>
+            <li class="" data-nav-id="/semaine3/index.html"><a class="padding" href="/semaine3/index.html">Semaine 3 : Éditeurs de texte</a></li>
+            <li class="" data-nav-id="/semaine4/index.html"><a class="padding" href="/semaine4/index.html">Semaine 4 : Introduction au BASH</a></li>
+            <li class="" data-nav-id="/semaine5/index.html"><a class="padding" href="/semaine5/index.html">Semaine 5 : Processus et gestion des tâches</a></li>
+            <li class="" data-nav-id="/semaine6/index.html"><a class="padding" href="/semaine6/index.html">Semaine 6 : Les expressions régulières</a></li>
+            <li class="" data-nav-id="/semaine7/index.html"><a class="padding" href="/semaine7/index.html">Semaine 7 : Les fichiers de configuration et examen formatif</a></li>
+            <li class="" data-nav-id="/semaine8/index.html"><a class="padding" href="/semaine8/index.html">Semaine 8 : Gestion des paquets</a></li>
+            <li class="" data-nav-id="/semaine9/index.html"><a class="padding" href="/semaine9/index.html">Semaine 9 : Réseaux et configuration</a></li>
+            <li class="" data-nav-id="/semaine10/index.html"><a class="padding" href="/semaine10/index.html">Semaine 10 : Sécurité de base</a></li>
+            <li class="" data-nav-id="/semaine11/index.html"><a class="padding" href="/semaine11/index.html">Semaine 11 : Scripting Shell</a></li>
+            <li class="" data-nav-id="/semaine12/index.html"><a class="padding" href="/semaine12/index.html">Semaine 12 : Travaux pratiques 1</a></li>
+            <li class="" data-nav-id="/semaine13/index.html"><a class="padding" href="/semaine13/index.html">Semaine 13 : Administration avancée</a></li>
+            <li class="" data-nav-id="/semaine14/index.html"><a class="padding" href="/semaine14/index.html">Semaine 14 : Travaux pratiques 2</a></li>
+            <li class="" data-nav-id="/semaine15/index.html"><a class="padding" href="/semaine15/index.html">Semaine 15 : Révision finale et examen</a></li>
+            <li class="" data-nav-id="/solutionnaires/index.html"><a class="padding" href="/solutionnaires/index.html">Solutions des ateliers</a><ul id="R-subsections-fd65cb0835a655cc8c1280a4fc3f2b90" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/semaine2/commandes-base/index.html" lang="fr-ca" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+        <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1734277356" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1734277356" defer></script>
+    <script src="/js/theme.js?1734277356" defer></script>
+  </body>
+</html>

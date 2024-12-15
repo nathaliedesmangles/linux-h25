@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.135.0">
+    <meta name="generator" content="Relearn 7.2.1">
+    <meta name="description" content="A FAIRE Simplifier, mettre juste les grandes idées er objectifs Lin vers page de l’atelier Objectif Cet atelier a pour but de vous guider à travers le processus d’installation de Linux sur une machine virtuelle (VM). Cela permet d’expérimenter avec Linux sans affecter le système d’exploitation principal de l’ordinateur.
+Prérequis pour l’installation Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.
+VMware. Guide d’installation de VMWare Workstation Pro Vidéo YouTube: Télécharger et installer VMWare Vous devez avoir téléchargé la dernière version d’Alma Linux.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ATELIER: Installation de Linux sur une VM :: 420-ZG4-MO">
+    <meta name="twitter:description" content="A FAIRE Simplifier, mettre juste les grandes idées er objectifs Lin vers page de l’atelier Objectif Cet atelier a pour but de vous guider à travers le processus d’installation de Linux sur une machine virtuelle (VM). Cela permet d’expérimenter avec Linux sans affecter le système d’exploitation principal de l’ordinateur.
+Prérequis pour l’installation Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.
+VMware. Guide d’installation de VMWare Workstation Pro Vidéo YouTube: Télécharger et installer VMWare Vous devez avoir téléchargé la dernière version d’Alma Linux.">
+    <meta property="og:url" content="https://linux-h25.github.com/semaine1/atelier/index.html">
+    <meta property="og:site_name" content="420-ZG4-MO">
+    <meta property="og:title" content="ATELIER: Installation de Linux sur une VM :: 420-ZG4-MO">
+    <meta property="og:description" content="A FAIRE Simplifier, mettre juste les grandes idées er objectifs Lin vers page de l’atelier Objectif Cet atelier a pour but de vous guider à travers le processus d’installation de Linux sur une machine virtuelle (VM). Cela permet d’expérimenter avec Linux sans affecter le système d’exploitation principal de l’ordinateur.
+Prérequis pour l’installation Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.
+VMware. Guide d’installation de VMWare Workstation Pro Vidéo YouTube: Télécharger et installer VMWare Vous devez avoir téléchargé la dernière version d’Alma Linux.">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="ATELIER: Installation de Linux sur une VM :: 420-ZG4-MO">
+    <meta itemprop="description" content="A FAIRE Simplifier, mettre juste les grandes idées er objectifs Lin vers page de l’atelier Objectif Cet atelier a pour but de vous guider à travers le processus d’installation de Linux sur une machine virtuelle (VM). Cela permet d’expérimenter avec Linux sans affecter le système d’exploitation principal de l’ordinateur.
+Prérequis pour l’installation Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.
+VMware. Guide d’installation de VMWare Workstation Pro Vidéo YouTube: Télécharger et installer VMWare Vous devez avoir téléchargé la dernière version d’Alma Linux.">
+    <meta itemprop="wordCount" content="419">
+    <title>ATELIER: Installation de Linux sur une VM :: 420-ZG4-MO</title>
+    <link href="/semaine1/atelier/index.xml" rel="alternate" type="application/rss+xml" title="ATELIER: Installation de Linux sur une VM :: 420-ZG4-MO">
+    <link href="/css/fontawesome-all.min.css?1734277356" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734277356" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1734277356" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734277356" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1734277356" rel="stylesheet">
+    <link href="/css/theme.min.css?1734277356" rel="stylesheet">
+    <link href="/css/format-html.min.css?1734277356" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/linux-h25.github.com';
+      window.relearn.min = `.min`;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/semaine1/atelier/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#a-faire">A FAIRE</a></li>
+    <li><a href="#objectif">Objectif</a></li>
+    <li><a href="#prérequis-pour-linstallation">Prérequis pour l’installation</a></li>
+    <li><a href="#installation-dalma-linux">Installation d&rsquo;Alma Linux</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">420-ZG4-MO Système d’exploitation Linux</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/semaine1/index.html"><span itemprop="name">Introduction à Linux</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">ATELIER: Installation de Linux sur une VM</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine1/qu-est-ce-que-linux/index.html" title="Qu&#39;est-ce que Linux ? (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine1/atelier/telecharger-vmware/index.html" title="Guide de téléchargement de VMWare Workstation 17 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable semaine1" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="atelier-installation-de-linux-sur-une-vm">ATELIER: Installation de Linux sur une VM</h1>
+
+<h2 id="a-faire">A FAIRE</h2>
+<ul>
+<li>Simplifier, mettre juste les grandes idées er objectifs</li>
+<li>Lin vers page de l&rsquo;atelier</li>
+</ul>
+<h2 id="objectif">Objectif</h2>
+<p>Cet atelier a pour but de vous guider à travers le processus d&rsquo;installation de Linux sur une machine virtuelle (VM). Cela permet d&rsquo;expérimenter avec Linux sans affecter le système d&rsquo;exploitation principal de l&rsquo;ordinateur.</p>
+<h2 id="prérequis-pour-linstallation">Prérequis pour l’installation</h2>
+<ol>
+<li>
+<p>Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.</p>
+<ul>
+<li><a href="https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html" rel="external" target="_blank">VMware</a>.</li>
+<li><a href=".pdf">Guide d&rsquo;installation de VMWare Workstation Pro</a></li>
+<li><a href="https://youtu.be/Uwm1FuKr9ck?si=j5JllG8e2H1aQ2bX" rel="external" target="_blank">Vidéo YouTube: Télécharger et installer VMWare</a></li>
+</ul>
+</li>
+<li>
+<p>Vous devez avoir téléchargé la dernière version d&rsquo;Alma Linux.</p>
+<ul>
+<li><a href="https://almalinux.org/get-almalinux/" rel="external" target="_blank">Alma Linux</a></li>
+<li>Choisissez une miroir et téléchargez <em><strong>AlmaLinux-9.5-x86_64-dvd.iso</strong></em>.</li>
+</ul>
+<p><a href="#R-image-2de4a31659bd93232ac9232807d033b1" class="lightbox-link"><img alt="Image ISO Alma Linux" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/semaine1/atelier/telecharger-alma.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2de4a31659bd93232ac9232807d033b1"><img alt="Image ISO Alma Linux" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/semaine1/atelier/telecharger-alma.png"></a></p>
+</li>
+</ol>
+<ul>
+<li>VMWare permet d’installer différents systèmes d’exploitation sur une même machine.</li>
+<li>Le nombre de machines virtuelles que l’on peut installer dépend de la puissance en terme de CPU et de mémoire de la machine hôte.</li>
+<li>La machine hôte est celle qui héberge les machines virtuelles.</li>
+<li>La machine hôte peut être Windows ou Linux et les invités peuvent être une grande variété de systèmes d’exploitation.</li>
+</ul>
+<h2 id="installation-dalma-linux">Installation d&rsquo;Alma Linux</h2>
+<p><a href=".pdf">Guide d&rsquo;installation d&rsquo;Alma Linux</a>
+<a href="https://wiki.almalinux.org/documentation/installation-guide.html#requirements" rel="external" target="_blank">https://wiki.almalinux.org/documentation/installation-guide.html#requirements</a></p>
+<hr>
+<ol start="3">
+<li>
+<p><strong>Création d&rsquo;une nouvelle machine virtuelle</strong></p>
+<ul>
+<li>Ouvrez VMware.</li>
+<li>Cliquez sur &ldquo;Nouvelle&rdquo; pour créer une nouvelle machine virtuelle.</li>
+<li>Donnez un nom à votre VM (par exemple, &ldquo;Linux VM&rdquo;) et sélectionnez le type et la version du système d&rsquo;exploitation (par exemple, Linux et Ubuntu 64-bit).</li>
+<li>Allouez de la mémoire RAM à la VM (au moins 2 Go recommandés).</li>
+<li>Créez un disque dur virtuel en suivant les instructions (taille recommandée : au moins 20 Go).</li>
+</ul>
+</li>
+<li>
+<p><strong>Configuration de la machine virtuelle</strong></p>
+<ul>
+<li>Sélectionnez la VM nouvellement créée et cliquez sur &ldquo;Paramètres&rdquo;.</li>
+<li>Allez dans l&rsquo;onglet &ldquo;Stockage&rdquo; et ajoutez un lecteur optique virtuel.</li>
+<li>Sélectionnez l&rsquo;image ISO de Linux que vous avez téléchargée précédemment.</li>
+</ul>
+</li>
+<li>
+<p><strong>Démarrage de la machine virtuelle</strong></p>
+<ul>
+<li>Sélectionnez la VM et cliquez sur &ldquo;Démarrer&rdquo;.</li>
+<li>La VM démarrera à partir de l&rsquo;image ISO et vous verrez l&rsquo;écran d&rsquo;installation de Linux.</li>
+</ul>
+</li>
+<li>
+<p><strong>Installation de Linux</strong></p>
+<ul>
+<li>Suivez les instructions à l&rsquo;écran pour installer Linux. Cela inclut la sélection de la langue, la configuration du réseau, le partitionnement du disque, et la création d&rsquo;un compte utilisateur.</li>
+<li>Une fois l&rsquo;installation terminée, redémarrez la VM.</li>
+</ul>
+</li>
+<li>
+<p><strong>Post-Installation</strong></p>
+<ul>
+<li>Après le redémarrage, retirez l&rsquo;image ISO du lecteur optique virtuel pour éviter de redémarrer sur l&rsquo;installateur.</li>
+<li>Connectez vous avec le compte utilisateur que vous avez créé.</li>
+<li>Mettez à jour le système et installez les logiciels nécessaires via le gestionnaire de paquets de la distribution (par exemple, <code>apt</code> pour Ubuntu).</li>
+</ul>
+</li>
+</ol>
+<p>Vous avez maintenant une machine virtuelle Linux fonctionnelle. Vous pouvez utiliser cette VM pour explorer Linux, installer des logiciels, et pratiquer des commandes sans risquer de perturber votre système principal.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+420-ZG4-MO
+          </a>
+        </div>
+        <script>
+          window.index_js_url="/searchindex.en.js?1734277356";
+        </script>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/js/auto-complete.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1734277356" defer></script>
+        <script src="/js/lunr/lunr.fr.min.js?1734277356" defer></script>
+        <script src="/js/search.js?1734277356" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/semaine1/index.html"><a class="padding" href="/semaine1/index.html"><b>Semaine 1. </b>Introduction à Linux</a><ul id="R-subsections-6db614d031e1cac329e6c8b2f083c50f" class="collapsible-menu">
+            <li class="" data-nav-id="/semaine1/qu-est-ce-que-linux/index.html"><a class="padding" href="/semaine1/qu-est-ce-que-linux/index.html">Qu&#39;est-ce que Linux ?</a></li>
+            <li class="active parent alwaysopen " data-nav-id="/semaine1/atelier/index.html"><a class="padding" href="/semaine1/atelier/index.html">ATELIER: Installation de Linux sur une VM</a><ul id="R-subsections-4594ed9eabecfc49ced10420966d5ee9" class="collapsible-menu">
+            <li class="" data-nav-id="/semaine1/atelier/telecharger-vmware/index.html"><a class="padding" href="/semaine1/atelier/telecharger-vmware/index.html">Guide de téléchargement de VMWare Workstation 17</a></li>
+            <li class="" data-nav-id="/semaine1/atelier/vmware/index.html"><a class="padding" href="/semaine1/atelier/vmware/index.html">Guide d&#39;installation de VMWare Workstation 17 sur Windows 10/11</a></li>
+            <li class="" data-nav-id="/semaine1/atelier/almalinux/index.html"><a class="padding" href="/semaine1/atelier/almalinux/index.html">Guide d&#39;installation d&#39;AlmaLinux sur VMWare Workstation</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/semaine2/index.html"><a class="padding" href="/semaine2/index.html"><b>Semaine 2. </b>Les commandes de base</a><ul id="R-subsections-30aa4391f5b81ccda88d9d93cb48f88e" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/semaine3/index.html"><a class="padding" href="/semaine3/index.html">Semaine 3 : Éditeurs de texte</a></li>
+            <li class="" data-nav-id="/semaine4/index.html"><a class="padding" href="/semaine4/index.html">Semaine 4 : Introduction au BASH</a></li>
+            <li class="" data-nav-id="/semaine5/index.html"><a class="padding" href="/semaine5/index.html">Semaine 5 : Processus et gestion des tâches</a></li>
+            <li class="" data-nav-id="/semaine6/index.html"><a class="padding" href="/semaine6/index.html">Semaine 6 : Les expressions régulières</a></li>
+            <li class="" data-nav-id="/semaine7/index.html"><a class="padding" href="/semaine7/index.html">Semaine 7 : Les fichiers de configuration et examen formatif</a></li>
+            <li class="" data-nav-id="/semaine8/index.html"><a class="padding" href="/semaine8/index.html">Semaine 8 : Gestion des paquets</a></li>
+            <li class="" data-nav-id="/semaine9/index.html"><a class="padding" href="/semaine9/index.html">Semaine 9 : Réseaux et configuration</a></li>
+            <li class="" data-nav-id="/semaine10/index.html"><a class="padding" href="/semaine10/index.html">Semaine 10 : Sécurité de base</a></li>
+            <li class="" data-nav-id="/semaine11/index.html"><a class="padding" href="/semaine11/index.html">Semaine 11 : Scripting Shell</a></li>
+            <li class="" data-nav-id="/semaine12/index.html"><a class="padding" href="/semaine12/index.html">Semaine 12 : Travaux pratiques 1</a></li>
+            <li class="" data-nav-id="/semaine13/index.html"><a class="padding" href="/semaine13/index.html">Semaine 13 : Administration avancée</a></li>
+            <li class="" data-nav-id="/semaine14/index.html"><a class="padding" href="/semaine14/index.html">Semaine 14 : Travaux pratiques 2</a></li>
+            <li class="" data-nav-id="/semaine15/index.html"><a class="padding" href="/semaine15/index.html">Semaine 15 : Révision finale et examen</a></li>
+            <li class="" data-nav-id="/solutionnaires/index.html"><a class="padding" href="/solutionnaires/index.html">Solutions des ateliers</a><ul id="R-subsections-fd65cb0835a655cc8c1280a4fc3f2b90" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/semaine1/atelier/index.html" lang="fr-ca" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+        <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1734277356" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1734277356" defer></script>
+    <script src="/js/theme.js?1734277356" defer></script>
+  </body>
+</html>

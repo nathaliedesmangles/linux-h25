@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>L&#39;histoire de Linux et ses distributions :: 420-ZG4-MO</title>
+    <title>L&#39;histoire de Linux et ses distributions :: 420-ZG4-MO Linux</title>
     <link>http://localhost:1313/semaine1/histoire-linux-distributions/index.html</link>
     <description>Origines de Linux Linux a été créé par Linus Torvalds en 1991 alors qu’il était étudiant à l’Université d’Helsinki en Finlande. Inspiré par le système d’exploitation MINIX, Torvalds a voulu créer un système d’exploitation libre et ouvert. Il a publié la première version du noyau Linux en septembre 1991, permettant à d’autres développeurs de contribuer à son développement.&#xA;Développement et croissance Années 1990 : Après la publication initiale, Linux a rapidement gagné en popularité parmi les développeurs et les passionnés d’informatique. La communauté open-source a joué un rôle crucial dans l’amélioration et l’expansion du système. 1992 : Le noyau Linux a été re-licencié sous la licence publique générale GNU (GPL), ce qui a renforcé son statut de logiciel libre. 1994 : La version 1.0 du noyau Linux a été publiée, marquant une étape importante dans son développement. Distributions Linux Une distribution Linux (ou “distro”) est une version de Linux qui inclut le noyau Linux ainsi que divers logiciels et outils. Voici quelques-unes des distributions les plus populaires :</description>
     <generator>Hugo</generator>

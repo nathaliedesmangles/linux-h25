@@ -1,23 +1,22 @@
 +++
-title = "ATELIER: Installation de Linux sur une VM"
+title = "ATELIER #1: Installation de Linux sur une VM"
 weight = 14
+alwaysopen = true
 +++
 
 ## A FAIRE
 
-- Simplifier, mettre juste les grandes idées er objectifs
-- Lin vers page de l'atelier
+- Simplifier, mettre juste les grandes idées et objectifs
+- Lien vers page de l'atelier
 
-## Objectif
+## Objectifs
 
-Cet atelier a pour but de vous guider à travers le processus d'installation de Linux sur une machine virtuelle (VM). Cela permet d'expérimenter avec Linux sans affecter le système d'exploitation principal de l'ordinateur.
+L'atelier a pour but de vous guider à travers le processus d'installation de Linux sur une machine virtuelle (VM). Cela permet d'expérimenter avec Linux sans affecter le système d'exploitation principal de l'ordinateur.
 
 ## Prérequis pour l’installation
 
 1. Vous devez avoir téléchargé et installé un logiciel de virtualisation tel que VMWare Workstation Pro.
-	- [VMware](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html).
-	- [Guide d'installation de VMWare Workstation Pro](.pdf)
-	- [Vidéo YouTube: Télécharger et installer VMWare](https://youtu.be/Uwm1FuKr9ck?si=j5JllG8e2H1aQ2bX)
+	- [Guide d'installation de VMware](À VENIR)
 2. Vous devez avoir téléchargé la dernière version d'Alma Linux.
 	- [Alma Linux](https://almalinux.org/get-almalinux/)
 	- Choisissez une miroir et téléchargez ***AlmaLinux-9.5-x86_64-dvd.iso***.

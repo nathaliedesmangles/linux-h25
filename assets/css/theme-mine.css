@@ -46,6 +46,11 @@ a[href^="mailto:"] {
     display: none;
 }
 
-#R-body-inner > div > article > footer > i.fa-fw.fas.fa-calendar{
+#R-body-inner > div > article > footer > i.fa-fw.fas.fa-user{
     display: none;
+}
+
+
+#R-body-inner > div > article > footer > i.fa-fw.fas.fa-calendar::after{
+    content: "Hiver 2025";
 }

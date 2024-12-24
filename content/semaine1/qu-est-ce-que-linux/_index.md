@@ -52,7 +52,6 @@ Depuis sa création, Linux est devenu l'un des systèmes d'exploitation les plus
 3. **Stabilité** : Linux est connu pour sa stabilité et sa capacité à fonctionner pendant de longues périodes sans nécessiter de redémarrage.
 4. **Personnalisation** : Les utilisateurs peuvent personnaliser leur environnement Linux selon leurs besoins, grâce à une multitude de distributions et d'outils disponibles.
 
-
 ### Distributions Linux
 {{% notice style=info title=Définition %}}
 Une **distribution Linux** est une version de Linux qui inclut le noyau Linux ainsi que divers logiciels et outils.
@@ -84,20 +83,16 @@ Une **distribution Linux** est une version de Linux qui inclut le noyau Linux ai
 
 [Répartition des systèmes d'exploitation pour le développement de logiciels dans le monde de 2018 à 2023](https://www.statista.com/statistics/869211/worldwide-software-development-operating-system/)
 
+| Avantages | Inconvénients |
+|-----------|----------------|
+| Très souvent le même environnement que la machine de production (surtout pour la portion serveur d’une application) | Accès très limité aux outils Microsoft : pas de Visual Studio, seulement VS Code et un support minimal pour C# |
+| Très facile d’installer des nouveaux outils de développement :<br> `$ dnf install nodejs`<br> `$ dnf install nodejs` | |
+| Une bonne console (ligne de commande) est souvent un bon dépanneur pour un développeur (p.ex. les messages d’erreur sont souvent plus explicites à la ligne de commande que dans l’IDE) | |
+| Plus facile d’automatiser des tâches de compilation et de tests | |
+| Systèmes plus légers qui laissent la place aux outils de développement (p.ex. mon Linux prend moins de 1Go de mémoire, alors le reste est pour les outils, VM, etc.). Dans le cours Android p.ex., l’environnement de développement prend 15Go de mémoire (pour l’IDE + deux émulateurs de téléphone). | |
 
 ### Part de marché des SE pour les serveurs 
 
 ![Part de marché SE 2023](repartition_serveurs.png)
 
 [Part de marché des systèmes d'exploitation pour les serveurs](https://www.fortunebusinessinsights.com/server-operating-system-market-106601)
-
-
-### Avantages de Linux
-
-- **Gratuit** : Contrairement à certains systèmes d'exploitation propriétaires, Linux est gratuit à télécharger et à utiliser.
-- **Communauté active** : Une vaste communauté de développeurs et d'utilisateurs contribue à l'amélioration continue de Linux.
-- **Support matériel** : Linux supporte une large gamme de matériels, des anciens ordinateurs aux derniers modèles.
-
-### Désavantages de Linux
-
-

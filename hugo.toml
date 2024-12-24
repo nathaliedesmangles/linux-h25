@@ -14,8 +14,7 @@ theme = 'relearn'
   [params.menu]
     alwaysopen = false
 
-  [params.footer]
-    custom = "partials/footer.html"
+
 
 
 

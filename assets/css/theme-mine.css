@@ -41,3 +41,8 @@
     --BOX-TEXT-color: rgba( 16, 16, 16, 1 ); /* fixed color of the content text */
 
 }
+
+a[href^="mailto:"] {
+    display: none;
+}
+

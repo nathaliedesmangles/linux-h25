@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Les commandes de base :: 420-ZG4-MO Linux</title>
+    <title>Le Shell Bash et l&#39;exécution de commandes de base :: 420-ZG4-MO Linux</title>
     <link>https://example.org/semaine2/index.html</link>
-    <description>Plan et objectifs de la leçon Théorie :&#xA;Structure du système de fichiers Linux Commandes de navigation de base (ls, cd, pwd, etc.) Atelier :&#xA;Exercices pratiques sur les commandes de base</description>
+    <description>Plan et objectifs de la leçon Théorie :&#xA;Qu’est-ce que le Shell Bash Structure du système de fichiers Linux Commandes de navigation de base (ls, cd, pwd, etc.) Atelier :&#xA;Exercices pratiques sur les commandes de base et le système de fichiers de Linux</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
     <atom:link href="https://example.org/semaine2/index.xml" rel="self" type="application/rss+xml" />
@@ -13,13 +13,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.org/semaine2/intro-shell-bash/index.html</guid>
       <description>Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d’exploitation Unix et Linux. Il permet aux utilisateurs d’exécuter des commandes pour interagir avec le système d’exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l’exécution de commandes simples à l’aide du shell Bash.&#xA;La ligne de commande Ligne de commande: La ligne de commande est l’interface où vous tapez vos commandes. Elle est souvent représentée par un symbole $ ou # pour les utilisateurs root. Lorsque vous êtes prêt à exécuter une commande, appuyez sur la touche Entrée. Tapez chaque commande sur une ligne séparée. Le résultat de la commande est affiché avant l’invite du shell suivante. Exemple:</description>
-    </item>
-    <item>
-      <title>Structure du système de fichiers Linux</title>
-      <link>https://example.org/semaine2/systeme-fichiers/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/semaine2/systeme-fichiers/index.html</guid>
-      <description>La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.&#xA;La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.</description>
     </item>
     <item>
       <title>Commandes de navigation de base sous Linux</title>

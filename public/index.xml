@@ -12,21 +12,21 @@
       <link>https://example.org/semaine1/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.org/semaine1/index.html</guid>
-      <description>Plan et objectifs de la leçon Présentation du cours (plan de cours)&#xA;Pondération Objectifs Evaluations formatives Évaluations sommatives Politiques institutionnelles (absences, retards, plagiat, révision de note) Théorie :&#xA;Généralités sur le système d’exploitation Linux Atelier :&#xA;Installation de Linux sur une machine virtuelle</description>
+      <description>Plan et objectifs de la leçon Présentation du cours (plan de cours).&#xA;Pondération. Objectifs. Contexte d’apprentissage et méthodes pédagogiques. Evaluations formatives. Évaluations sommatives. Politiques institutionnelles (absences, retards, plagiat, etc.). Règlements en classe et hors classe. Théorie :&#xA;Généralités sur le système d’exploitation Linux. Atelier :&#xA;Installation de Linux sur une machine virtuelle.</description>
     </item>
     <item>
-      <title>Les commandes de base</title>
+      <title>Le Shell Bash et l&#39;exécution de commandes de base</title>
       <link>https://example.org/semaine2/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.org/semaine2/index.html</guid>
-      <description>Plan et objectifs de la leçon Théorie :&#xA;Structure du système de fichiers Linux Commandes de navigation de base (ls, cd, pwd, etc.) Atelier :&#xA;Exercices pratiques sur les commandes de base</description>
+      <description>Plan et objectifs de la leçon Théorie :&#xA;Qu’est-ce que le Shell Bash Structure du système de fichiers Linux Commandes de navigation de base (ls, cd, pwd, etc.) Atelier :&#xA;Exercices pratiques sur les commandes de base et le système de fichiers de Linux</description>
     </item>
     <item>
-      <title>Semaine 3 : Éditeurs de texte</title>
+      <title>Semaine 3 : Le système de fichiers et la séquence de démarrage de Linux</title>
       <link>https://example.org/semaine3/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.org/semaine3/index.html</guid>
-      <description>Plan et objectifs de la leçon Théorie :&#xA;Introduction à nano et vi Comparaison avec d’autres éditeurs de texte Atelier :&#xA;Création et modification de fichiers texte avec nano et vi</description>
+      <description>Plan et objectifs de la leçon Théorie :&#xA;Le système de fichiers de Linux La séquence de démarrage du SE Linux Introduction à l’éditeur de texte Vim Atelier :&#xA;Création et modification de fichiers texte avec l’éditeur Vim</description>
     </item>
     <item>
       <title>Semaine 4 : Introduction au BASH</title>

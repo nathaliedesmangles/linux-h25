@@ -5,18 +5,26 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.135.0">
     <meta name="generator" content="Relearn 7.2.1">
-    <meta name="description" content="">
+    <meta name="description" content="La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.
+La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Solutions des ateliers :: 420-ZG4-MO Linux">
-    <meta property="og:url" content="https://example.org/solutionnaires/index.html">
+    <meta name="twitter:title" content="Structure du système de fichiers Linux :: 420-ZG4-MO Linux">
+    <meta name="twitter:description" content="La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.
+La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.">
+    <meta property="og:url" content="https://example.org/semaine3/systeme-fichiers/index.html">
     <meta property="og:site_name" content="420-ZG4-MO Linux">
-    <meta property="og:title" content="Solutions des ateliers :: 420-ZG4-MO Linux">
+    <meta property="og:title" content="Structure du système de fichiers Linux :: 420-ZG4-MO Linux">
+    <meta property="og:description" content="La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.
+La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.">
     <meta property="og:locale" content="fr_ca">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Solutions des ateliers :: 420-ZG4-MO Linux">
-    <title>Solutions des ateliers :: 420-ZG4-MO Linux</title>
-    <link href="/solutionnaires/index.xml" rel="alternate" type="application/rss+xml" title="Solutions des ateliers :: 420-ZG4-MO Linux">
+    <meta itemprop="name" content="Structure du système de fichiers Linux :: 420-ZG4-MO Linux">
+    <meta itemprop="description" content="La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.
+La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.">
+    <meta itemprop="wordCount" content="482">
+    <title>Structure du système de fichiers Linux :: 420-ZG4-MO Linux</title>
+    <link href="/semaine3/systeme-fichiers/index.xml" rel="alternate" type="application/rss+xml" title="Structure du système de fichiers Linux :: 420-ZG4-MO Linux">
     <link href="/css/fontawesome-all.min.css?1735066369" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1735066369" rel="stylesheet"></noscript>
     <link href="/css/auto-complete.css?1735066369" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1735066369" rel="stylesheet"></noscript>
     <link href="/css/perfect-scrollbar.min.css?1735066369" rel="stylesheet">
@@ -24,8 +32,8 @@
     <link href="/css/format-html.min.css?1735066369" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.relBasePath='..';
-      window.relearn.relBaseUri='..';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/example.org';
       window.relearn.min = `.min`;
       window.relearn.disableAnchorCopy=false;
@@ -70,7 +78,7 @@
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html" data-url="/solutionnaires/index.html">
+  <body class="mobile-support html" data-url="/semaine3/systeme-fichiers/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -81,19 +89,25 @@
             </div>
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#répertoires-principaux">Répertoires principaux</a></li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">420-ZG4-MO Système d’exploitation Linux</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Solutions des ateliers</span><meta itemprop="position" content="2"></li>
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/semaine3/index.html"><span itemprop="name">Semaine 3 : Le système de fichiers et la séquence de démarrage de Linux</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Structure du système de fichiers Linux</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine15/index.html" title="Semaine 15 : Révision finale et examen (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine3/index.html" title="Semaine 3 : Le système de fichiers et la séquence de démarrage de Linux (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/solutionnaires/atelier2/index.html" title="ATELIER02: Les commandes Linux de base (SOLUTION) (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/semaine4/index.html" title="Semaine 4 : Introduction au BASH (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -107,14 +121,136 @@
         </div>
       </nav>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable solutionnaires" tabindex="-1">
+      <main id="R-body-inner" class="highlightable semaine3" tabindex="-1">
         <div class="flex-block-wrapper">
 <article class="default">
   <header class="headline">
   </header>
 
-<h1 id="solutions-des-ateliers">Solutions des ateliers</h1>
+<h1 id="structure-du-système-de-fichiers-linux">Structure du système de fichiers Linux</h1>
 
+<p><a href="#R-image-9ddee6e79ee5a20e97e4d650938bc3f7" class="lightbox-link"><img alt="Arborescence" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/semaine3/systeme-fichiers/filesystem.png?width=100vw" style=" height: auto; width: 100vw;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9ddee6e79ee5a20e97e4d650938bc3f7"><img alt="Arborescence" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/semaine3/systeme-fichiers/filesystem.png?width=100vw"></a></p>
+<p>La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d&rsquo;un arbre inversé, où la racine (root) est représentée par <code>/</code>.
+Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.</p>
+<p>La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.</p>
+<h2 id="répertoires-principaux">Répertoires principaux</h2>
+<ol>
+<li>
+<p><strong>/</strong> (Racine)</p>
+<ul>
+<li>Le point de départ de l&rsquo;arborescence du système de fichiers. Tous les autres répertoires et fichiers sont situés sous ce répertoire.</li>
+</ul>
+</li>
+<li>
+<p><strong>/bin</strong></p>
+<ul>
+<li>Contient les binaires essentiels nécessaires au démarrage du système et à l&rsquo;exécution des commandes de base, comme <code>ls</code>, <code>cp</code>, <code>mv</code>, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>/boot</strong></p>
+<ul>
+<li>Contient les fichiers nécessaires au démarrage du système, y compris le noyau Linux et les fichiers de configuration du chargeur de démarrage (bootloader).</li>
+</ul>
+</li>
+<li>
+<p><strong>/dev</strong></p>
+<ul>
+<li>Contient les fichiers de périphériques. Chaque périphérique matériel (comme les disques durs, les clés USB, etc.) est représenté par un fichier dans ce répertoire.</li>
+</ul>
+</li>
+<li>
+<p><strong>/etc</strong></p>
+<ul>
+<li>Contient les fichiers de configuration du système. Par exemple, les fichiers de configuration des services, des utilisateurs, des réseaux, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>/home</strong></p>
+<ul>
+<li>Contient les répertoires personnels des utilisateurs. Chaque utilisateur a son propre répertoire sous <code>/home</code>, par exemple <code>/home/utilisateur</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>/lib</strong></p>
+<ul>
+<li>Contient les bibliothèques partagées nécessaires pour les binaires situés dans <code>/bin</code> et <code>/sbin</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>/media</strong></p>
+<ul>
+<li>Point de montage pour les périphériques amovibles comme les CD-ROM, les clés USB, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>/mnt</strong></p>
+<ul>
+<li>Utilisé pour monter temporairement des systèmes de fichiers. Par exemple, pour monter un disque dur externe.</li>
+</ul>
+</li>
+<li>
+<p><strong>/opt</strong></p>
+<ul>
+<li>Contient les logiciels optionnels et les paquets additionnels qui ne sont pas inclus dans la distribution standard.</li>
+</ul>
+</li>
+<li>
+<p><strong>/proc</strong></p>
+<ul>
+<li>Système de fichiers virtuel qui contient des informations sur les processus en cours et le système. Par exemple, <code>/proc/cpuinfo</code> contient des informations sur le processeur.</li>
+</ul>
+</li>
+<li>
+<p><strong>/root</strong></p>
+<ul>
+<li>Répertoire personnel de l&rsquo;utilisateur root (administrateur du système).</li>
+</ul>
+</li>
+<li>
+<p><strong>/run</strong></p>
+<ul>
+<li>Contient des informations sur l&rsquo;état du système depuis le dernier démarrage. Utilisé pour stocker des fichiers temporaires nécessaires au fonctionnement du système.</li>
+</ul>
+</li>
+<li>
+<p><strong>/sbin</strong></p>
+<ul>
+<li>Contient les binaires essentiels pour l&rsquo;administration du système, comme <code>fdisk</code>, <code>ifconfig</code>, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>/srv</strong></p>
+<ul>
+<li>Contient les données spécifiques aux services fournis par le système. Par exemple, les fichiers de données pour un serveur web peuvent être stockés ici.</li>
+</ul>
+</li>
+<li>
+<p><strong>/tmp</strong></p>
+<ul>
+<li>Contient les fichiers temporaires créés par les utilisateurs et les applications. Ce répertoire est souvent vidé au redémarrage du système.</li>
+</ul>
+</li>
+<li>
+<p><strong>/usr</strong></p>
+<ul>
+<li>Contient les applications et les fichiers utilisés par les utilisateurs. Sous-répertoires importants :
+<ul>
+<li><strong>/usr/bin</strong> : Contient les binaires des applications utilisateur.</li>
+<li><strong>/usr/lib</strong> : Contient les bibliothèques partagées pour les applications utilisateur.</li>
+<li><strong>/usr/local</strong> : Contient les logiciels installés localement par l&rsquo;administrateur du système.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>/var</strong></p>
+<ul>
+<li>Contient les fichiers variables, tels que les journaux système, les fichiers de spool, et les fichiers temporaires des applications. Par exemple, <code>/var/log</code> contient les fichiers journaux.</li>
+</ul>
+</li>
+</ol>
 
   <footer class="footline">
   </footer>
@@ -139,7 +275,8 @@
           <ul class="enlarge morespace collapsible-menu">
             <li class="" data-nav-id="/semaine1/index.html"><a class="padding" href="/semaine1/index.html"><b>Semaine 1. </b>Introduction à Linux</a><ul id="R-subsections-6db614d031e1cac329e6c8b2f083c50f" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/semaine2/index.html"><a class="padding" href="/semaine2/index.html"><b>Semaine 2. </b>Le Shell Bash et l&#39;exécution de commandes de base</a><ul id="R-subsections-30aa4391f5b81ccda88d9d93cb48f88e" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-id="/semaine3/index.html"><a class="padding" href="/semaine3/index.html">Semaine 3 : Le système de fichiers et la séquence de démarrage de Linux</a><ul id="R-subsections-20df5992ee4a38745c53049bf1f824d0" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/semaine3/index.html"><a class="padding" href="/semaine3/index.html">Semaine 3 : Le système de fichiers et la séquence de démarrage de Linux</a><ul id="R-subsections-20df5992ee4a38745c53049bf1f824d0" class="collapsible-menu">
+            <li class="active " data-nav-id="/semaine3/systeme-fichiers/index.html"><a class="padding" href="/semaine3/systeme-fichiers/index.html">Structure du système de fichiers Linux</a></li></ul></li>
             <li class="" data-nav-id="/semaine4/index.html"><a class="padding" href="/semaine4/index.html">Semaine 4 : Introduction au BASH</a></li>
             <li class="" data-nav-id="/semaine5/index.html"><a class="padding" href="/semaine5/index.html">Semaine 5 : Processus et gestion des tâches</a></li>
             <li class="" data-nav-id="/semaine6/index.html"><a class="padding" href="/semaine6/index.html">Semaine 6 : Les expressions régulières</a></li>
@@ -152,8 +289,7 @@
             <li class="" data-nav-id="/semaine13/index.html"><a class="padding" href="/semaine13/index.html">Semaine 13 : Administration avancée</a></li>
             <li class="" data-nav-id="/semaine14/index.html"><a class="padding" href="/semaine14/index.html">Semaine 14 : TP 2</a></li>
             <li class="" data-nav-id="/semaine15/index.html"><a class="padding" href="/semaine15/index.html">Semaine 15 : Révision finale et examen</a></li>
-            <li class="active parent " data-nav-id="/solutionnaires/index.html"><a class="padding" href="/solutionnaires/index.html">Solutions des ateliers</a><ul id="R-subsections-fd65cb0835a655cc8c1280a4fc3f2b90" class="collapsible-menu">
-            <li class="" data-nav-id="/solutionnaires/atelier2/index.html"><a class="padding" href="/solutionnaires/atelier2/index.html">ATELIER02: Les commandes Linux de base (SOLUTION)</a></li></ul></li>
+            <li class="" data-nav-id="/solutionnaires/index.html"><a class="padding" href="/solutionnaires/index.html">Solutions des ateliers</a><ul id="R-subsections-fd65cb0835a655cc8c1280a4fc3f2b90" class="collapsible-menu"></ul></li>
           </ul>
         </div>
     
@@ -169,7 +305,7 @@
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/solutionnaires/index.html" lang="fr-ca" selected></option>
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/semaine3/systeme-fichiers/index.html" lang="fr-ca" selected></option>
                     </select>
                   </div>
                   <div class="clear"></div>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Semaine 3 : Éditeurs de texte :: 420-ZG4-MO Linux</title>
+    <title>Semaine 3 : Le système de fichiers et la séquence de démarrage de Linux :: 420-ZG4-MO Linux</title>
     <link>https://example.org/semaine3/index.html</link>
-    <description>Plan et objectifs de la leçon Théorie :&#xA;Introduction à nano et vi Comparaison avec d’autres éditeurs de texte Atelier :&#xA;Création et modification de fichiers texte avec nano et vi</description>
+    <description>Plan et objectifs de la leçon Théorie :&#xA;Le système de fichiers de Linux La séquence de démarrage du SE Linux Introduction à l’éditeur de texte Vim Atelier :&#xA;Création et modification de fichiers texte avec l’éditeur Vim</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
     <atom:link href="https://example.org/semaine3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Structure du système de fichiers Linux</title>
+      <link>https://example.org/semaine3/systeme-fichiers/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/semaine3/systeme-fichiers/index.html</guid>
+      <description>La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.&#xA;La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.</description>
+    </item>
   </channel>
 </rss>

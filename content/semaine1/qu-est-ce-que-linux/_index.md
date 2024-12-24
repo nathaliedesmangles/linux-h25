@@ -97,3 +97,7 @@ Une **distribution Linux** est une version de Linux qui inclut le noyau Linux ai
 - **Gratuit** : Contrairement à certains systèmes d'exploitation propriétaires, Linux est gratuit à télécharger et à utiliser.
 - **Communauté active** : Une vaste communauté de développeurs et d'utilisateurs contribue à l'amélioration continue de Linux.
 - **Support matériel** : Linux supporte une large gamme de matériels, des anciens ordinateurs aux derniers modèles.
+
+### Désavantages de Linux
+
+

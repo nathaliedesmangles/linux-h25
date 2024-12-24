@@ -3,7 +3,7 @@ title = "Exécution de commandes à l’aide du Shell Bash"
 weight = 21
 +++
 
-Le shell Bash (Bourne Again SHell) est un interpréteur de commandes utilisé principalement sur les systèmes d'exploitation Unix et Linux. Il permet aux utilisateurs d'exécuter des commandes pour interagir avec le système d'exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l'exécution de commandes simples à l'aide du shell Bash.
+Le shell Bash (*Bourne Again SHell*) est un interpréteur de commandes utilisé principalement sur les systèmes d'exploitation Unix et Linux. Il permet aux utilisateurs d'exécuter des commandes pour interagir avec le système d'exploitation, automatiser des tâches et gérer des fichiers et des processus. Cette leçon se concentre sur l'exécution de commandes simples à l'aide du shell Bash.
 
 
 ## La ligne de commande

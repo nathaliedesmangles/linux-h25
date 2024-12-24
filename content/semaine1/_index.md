@@ -6,15 +6,17 @@ weight = 10
 +++
 
 ## Plan et objectifs de la leçon
-- **Présentation du cours** (plan de cours)
-  - Pondération
-  - Objectifs
-  - Evaluations formatives
-  - Évaluations sommatives
-  - Politiques institutionnelles (absences, retards, plagiat, révision de note)
+- **Présentation du cours** (plan de cours).
+  - Pondération.
+  - Objectifs.
+  - Contexte d'apprentissage et méthodes pédagogiques.
+  - Evaluations formatives.
+  - Évaluations sommatives.
+  - Politiques institutionnelles (absences, retards, plagiat, etc.).
+  - Règlements en classe et hors classe.
 
 - **Théorie :**
-  - Généralités sur le système d'exploitation Linux
+  - Généralités sur le système d'exploitation Linux.
 
 - **Atelier :**
-  - Installation de Linux sur une machine virtuelle
+  - Installation de Linux sur une machine virtuelle.

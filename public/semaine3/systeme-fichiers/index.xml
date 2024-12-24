@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Structure du système de fichiers Linux :: 420-ZG4-MO Linux</title>
-    <link>http://localhost:1313/semaine2/systeme-fichiers/index.html</link>
+    <link>https://example.org/semaine3/systeme-fichiers/index.html</link>
     <description>La structure du système de fichiers Linux est hiérarchique et organisée sous la forme d’un arbre inversé, où la racine (root) est représentée par /. Tous les fichiers et répertoires sont situés sous cette racine. Comprendre cette structure est essentiel pour naviguer et gérer efficacement un système Linux.&#xA;La structure du système de fichiers Linux est conçue pour être logique et organisée, facilitant ainsi la gestion et la navigation. Chaque répertoire a un rôle spécifique et contient des types de fichiers bien définis. Comprendre cette structure est crucial pour tout utilisateur ou administrateur de système Linux.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:1313/semaine2/systeme-fichiers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/semaine3/systeme-fichiers/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

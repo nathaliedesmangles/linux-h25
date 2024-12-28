@@ -46,7 +46,7 @@ a[href^="mailto:"] {
     display : none ;
 }
 
-#R-body-inner > div > article > footer > i.fa-fw.fas.fa-user::after{
+#R-body-inner > div > article > footer > i.fa-fw.fas.fa-user::before {
     content: "Hiver 2025";
 }
 

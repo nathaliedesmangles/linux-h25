@@ -46,12 +46,11 @@ a[href^="mailto:"] {
     display: none;
 }
 
-#R-body-inner > div > article > footer > i.fa-fw.fas.fa-user{
-    display: none;
+#R-body-inner > div > article > footer > i.fa-fw.fas.fa-user::before{
+    content: "Hiver 2025";
 }
 
 
 #R-body-inner > div > article > footer > i.fa-fw.fas.fa-calendar::before{
-    content: "Hiver 2025";
-    display: inline-block ;
+    display: none ;
 }

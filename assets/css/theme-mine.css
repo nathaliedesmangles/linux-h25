@@ -47,7 +47,7 @@ a[href^="mailto:"] {
 }
 
 #R-body-inner > div > article > footer > i.fa-fw.fas.fa-user::after{
-    content: "Hiver 2025";
+    content: "Copyright 2025";
 }
 
 

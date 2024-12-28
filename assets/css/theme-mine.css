@@ -51,6 +51,6 @@ a[href^="mailto:"] {
 }
 
 
-#R-body-inner > div > article > footer > i.fa-fw.fas.fa-calendar::before{
+#R-body-inner > div > article > footer > i.fa-fw.fas.fa-calendar{
     display : none ;
 }

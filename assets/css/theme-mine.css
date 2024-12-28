@@ -1,4 +1,4 @@
-:root {
+je:root {
     --MAIN-TEXT-color: #101010; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #444753; /* Color of titles h2-h3-h4-h5-h6 */
     --MAIN-LINK-color: #486ac9; /* Color of links */
@@ -43,7 +43,7 @@
 }
 
 a[href^="mailto:"] {
-    display: none;
+    visibility : hidden ;
 }
 
 #R-body-inner > div > article > footer > i.fa-fw.fas.fa-user::before{

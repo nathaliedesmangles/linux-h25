@@ -43,7 +43,7 @@ je:root {
 }
 
 a[href^="mailto:"] {
-    visibility : hidden ;
+    display : none ;
 }
 
 #R-body-inner > div > article > footer > i.fa-fw.fas.fa-user::before{

@@ -1,4 +1,4 @@
-je:root {
+ije:root {
     --MAIN-TEXT-color: #101010; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #444753; /* Color of titles h2-h3-h4-h5-h6 */
     --MAIN-LINK-color: #486ac9; /* Color of links */
@@ -47,5 +47,9 @@ a[href^="mailto:"] {
 }
 
 #R-body-inner > div > article > footer {
+    display : none ;
+}
+
+#R-footer{
     display : none ;
 }

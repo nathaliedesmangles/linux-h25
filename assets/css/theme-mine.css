@@ -1,4 +1,4 @@
-:root {
+ije:root {
     --MAIN-TEXT-color: #101010; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #444753; /* Color of titles h2-h3-h4-h5-h6 */
     --MAIN-LINK-color: #486ac9; /* Color of links */
@@ -48,14 +48,13 @@
 
 
 a[href^="mailto:"] {
-    display: none;
+    display : none ;
 }
 
-#R-body-inner > div > article > footer > i.fa-fw.fas.fa-user{
-    display: none;
+#R-body-inner > div > article > footer {
+    display : none ;
 }
 
-
-#R-body-inner > div > article > footer > i.fa-fw.fas.fa-calendar::before{
-    content: "Hiver 2025";
+#R-footer{
+    display : none ;
 }

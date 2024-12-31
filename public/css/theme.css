@@ -2474,7 +2474,7 @@ html[dir='rtl'] .menu-control span {
 .showVariantSwitch,
 .showVisitedLinks,
 .showFooter {
-  display: block;
+  display: none; /*block*/
 }
 
 /* clears the 'X' from Chrome's search input */

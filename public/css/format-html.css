@@ -46,6 +46,24 @@
 
 }
 
+#R-header{
+    background-color: yellow;
+}
+
+
+a[href^="mailto:"] {
+    display: none;
+}
+
+#R-body-inner > div > article > footer > i.fa-fw.fas.fa-user{
+    display: none;
+}
+
+
+#R-body-inner > div > article > footer > i.fa-fw.fas.fa-calendar::before{
+    content: "Hiver 2025";
+}
+
 /* based on monokailight */
 /* Background */ .bg { color: #272822; background-color: #fafafa; }
 /* PreWrapper */ .chroma { color: #272822; background-color: #fafafa; }
